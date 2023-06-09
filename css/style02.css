@@ -524,7 +524,8 @@
   border: 3px solid #001e71;
   border-radius: 30px;
   overflow: hidden;
-}
+  position: relative;
+} /* 2023-06-09 */
 .price_new .list li > div {
   display: flex;
   flex-direction: column;
@@ -537,6 +538,16 @@
 .price_new .list .features {
   display: block !important;
 }
+.price_new .list .features > button {
+  height: 32px;
+  padding: 0 15px;
+  background: #587fd5;
+  color: #fff;
+  font-size: 16px;
+  margin: 10px auto;
+  display: block;
+  border-radius: 16px;
+} /* 2023-06-09 */
 .price_new .subject {
   height: 48px;
   font-size: 20px;
@@ -554,25 +565,27 @@
   color: #587fd5;
   font-weight: 600;
 }
+/* 2023-06-09 css수정 + .features삭제 */
 .price_new .features {
-  height: 280px;
+  height: 350px;
   padding: 10px 15px;
 }
-.price_new .features.common {
+.price_new .common {
   height: 100px;
+  padding: 10px 15px;
 }
-.price_new .features dl {
+.price_new dl {
   font-size: 16px;
   line-height: 26px;
   letter-spacing: -0.02em;
 }
-.price_new .features dt {
+.price_new dt {
   font-weight: 600;
 }
-.price_new .features dd {
+.price_new dd {
   text-indent: 3px;
 }
-.price_new .features dd::before {
+.price_new dd::before {
   content: "";
   width: 6px;
   height: 6px;
@@ -582,18 +595,19 @@
   vertical-align: middle;
   margin-right: 5px;
 }
-.price_new .features.combined {
+.price_new .combined {
   display: flex;
   position: absolute;
-  bottom: 60px;
+  bottom: 0;
   left: 3px;
   right: 3px;
   justify-content: center;
   background: #ebf2f7;
 }
-.price_new .features.combined dl + dl {
+.price_new .combined dl + dl {
   margin-left: 100px;
 }
+/* [e] 2023-06-09 css수정 + .features삭제 */
 .price_new .note {
   font-size: 14px;
   color: #000;
@@ -785,6 +799,10 @@
   margin-top: 5px;
   font-weight: 300;
 }
+.pricing_con .training_team .try {
+  position: relative;
+  background: transparent;
+} /* 2023-06-09 */
 
 /* pricing 팝업 */
 .pricing_pop .popup .txt_con {
@@ -1504,7 +1522,6 @@
   background-image: url(../images/ico/ico_mathalive_logo.png);
   background-size: 15.333vw auto;
 }
-/* [s] 2023-05-08 */
 .playdm_wrap .mobile_wrap .step_wrap .step .btn_how {
   font-size: 2.83vw;
   color: #001e71;
@@ -1519,23 +1536,6 @@
   left: 50%;
   transform: translateX(-50%);
 }
-/* 삭제
- .playdm_wrap .mobile_wrap .step_wrap .step .btn_how.wings {
-  background: #28315f;
-}
-.playdm_wrap .mobile_wrap .step_wrap .step .btn_how.elif {
-  background: #764cac;
-}
-.playdm_wrap .mobile_wrap .step_wrap .step .btn_how.od {
-  background: #4c98bd;
-}
-.playdm_wrap .mobile_wrap .step_wrap .step .btn_how.odf {
-  background: #354c84;
-}
-.playdm_wrap .mobile_wrap .step_wrap .step .btn_how.ma {
-  background: #80b720;
-} */
-/* [e] 2023-05-08 */
 .playdm_wrap .mobile_wrap .step_wrap .step .choices li {
   display: flex;
   align-items: center;
@@ -1578,7 +1578,6 @@
   height: 14.75vw;
 }
 .playdm_wrap .mobile_wrap .step_btns button {
-  /* 2023-05-08 컬러 변경 */
   background: #3554bd;
   height: 100%;
   width: 100%;
@@ -2090,7 +2089,6 @@
   padding: 6px 15px;
 }
 
-/* [s] 2023-04-27 policy */
 .poli_table_new {
   font-size: 13px;
   border-collapse: collapse;
@@ -2127,7 +2125,6 @@
   gap: 15px;
   font-size: 18px;
 }
-/* [e] 2023-04-27 */
 
 .press_view .press_top {
   display: flex;
@@ -2389,7 +2386,6 @@
   pointer-events: none;
 }
 
-/* [s] 2023-05-03 아이디를 클래스로 변경 */
 .info_pop .cont_info {
   width: min(920px, 77%);
   border-width: 8px;
@@ -2408,7 +2404,6 @@
   font-size: 35px;
   margin-top: 40px;
 }
-/* [e] 2023-05-03 */
 
 .accordion .lexile .img_con > div {
   position: relative;
@@ -2605,7 +2600,6 @@
     pointer-events: auto;
   }
 
-  /* [s] 2023-05-03 아이디를 클래스로 변경 */
   .info_pop .cont_info {
     border-width: 0.6vw;
     border-radius: 3.18vw;
@@ -2622,7 +2616,6 @@
     font-size: 2.65vw;
     margin-top: 3.03vw;
   }
-  /* [e] 2023-05-03 */
 }
 
 @media all and (max-width: 1200px) {
@@ -2663,10 +2656,10 @@
   .price_new .price strong {
     font-size: 22px;
   }
-  .price_new .features dl {
+  .price_new dl {
     font-size: 15px;
     line-height: 24px;
-  }
+  } /* 2023-06-09 .features삭제 */
   .price_new .wings .logo img {
     height: 57px;
   }
@@ -2682,6 +2675,9 @@
   .price_new .odf .logo img {
     height: 52px;
   }
+  .price_new .list .features > button {
+    font-size: 14px;
+  } /* 2023-06-09 */
 
   .methods {
     padding: 5.83vw 5vw;
@@ -3576,8 +3572,8 @@
     display: none !important;
   }
   .price_new .mobile {
-    display: flex !important;
-  }
+    display: block !important;
+  } /* 2023-06-09 */
   .price_new .slick-slide {
     box-shadow: none;
     border: 0.25vw solid #001e71;
@@ -3585,7 +3581,8 @@
     width: 54vw;
     margin: 10.83vw 1.917vw 0;
     border-radius: 2.5vw;
-  }
+    overflow: hidden;
+  } /* 2023-06-09 */
   .price_new .target {
     position: absolute;
     top: -10.83vw;
@@ -3619,28 +3616,31 @@
   .price_new .price strong {
     font-size: 5vw;
   }
+  /* [s] 2023-06-09 css수정 + .features삭제 */
   .price_new .features {
-    height: 51vw;
+    height: 68vw;
     padding: 2.083vw 3.333vw;
   }
-  .price_new .features .mobile {
+  /* .price_new .features .mobile {
     display: block !important;
-  }
-  .price_new .features.common {
+  }  */
+  .price_new .common {
     height: auto;
+    align-items: flex-start !important;
   }
-  .price_new .features dl {
+  .price_new dl {
     font-size: 3.2vw;
     line-height: 5.2vw;
   }
-  .price_new .features dd {
+  .price_new dd {
     text-indent: 0.833vw;
   }
-  .price_new .features dd::before {
+  .price_new dd::before {
     width: 1vw;
     height: 1vw;
     margin-right: 1.25vw;
   }
+  /* [e] 2023-06-09  css수정 + .features삭제 */
   .price_new .note {
     font-size: 2.833vw;
     margin-top: 4.167vw;
@@ -3683,6 +3683,13 @@
     height: 4.67vw;
     line-height: 4.67vw;
   }
+  .price_new .list .features > button {
+    height: 6.5vw;
+    padding: 0 2.917vw;
+    font-size: 3.333vw;
+    margin: 1vw auto 4vw;
+    border-radius: 3.25vw;
+  } /* 2023-06-09 */
 
   /* pricing 팝업 */
   .pricing_pop .procedure ol {
@@ -4025,14 +4032,12 @@
     padding-left: 1.08vw;
   }
 
-  /* [s] 2023-04-27 policy */
   .lang_select {
     font-size: 14px;
   }
   .lang_select .selectric-wrapper {
     width: 30%;
   }
-  /* [e] 2023-04-27 policy */
 }
 
 @media all and (max-width: 680px) {

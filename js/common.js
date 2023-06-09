@@ -159,7 +159,6 @@ $(function () {
   //select
   $("select").selectric();
 
-  // [s] 2023-05-19 polcy
   const policy_lang_cont = document.querySelectorAll(
     "#policy_cont .policy_lang_cont"
   );
@@ -181,7 +180,6 @@ $(function () {
       });
     });
   });
-  // [e] 2023-05-19 polcy
 
   //서브하위메뉴 노출시 여백추가
   if ($(".subtop_sub").is(":visible")) {
@@ -239,7 +237,7 @@ $(function () {
   } else {
   }
 
-  // 2023-05-23 FOR PARTNERS
+  // FOR PARTNERS
   if ($(".partner_slide ul").length > 0) {
     $(".partner_slide ul").slick({
       infinite: true,
@@ -273,7 +271,8 @@ $(function () {
   }
 
   if ($(".price_new .list").length > 0) {
-    $(".price_new .list").slick({
+    // 2023-06-09 target을 ul로 변경
+    $(".price_new .list ul").slick({
       slidesToShow: 5,
       infinite: false,
       responsive: [
@@ -635,7 +634,6 @@ $(function () {
     }
   }
 
-  // 2023-01-03 popup show once
   const pop_once = document.querySelectorAll(".pop_once");
   function showOnce(pop) {
     const closeBtn = pop.querySelector(".btn_close");
@@ -648,6 +646,13 @@ $(function () {
     });
   }
   pop_once.forEach((pop) => showOnce(pop));
+
+  // 2023-06-09 챗봇
+  const chatbot = document.getElementById("custom_chat_button");
+  const chatbot_close = chatbot.querySelector(".close");
+  chatbot_close.addEventListener("click", () => {
+    chatbot.style.display = "none";
+  });
 });
 
 function XSSRemoveTag(str) {

@@ -1093,7 +1093,8 @@
 
 .video_board_wrap {
   margin-top: 60px;
-}
+  margin-bottom: 100px;
+}/* 2023-06-09 */
 .video_board_wrap .board_select {
   margin-bottom: 120px;
 }
@@ -1169,9 +1170,6 @@
 }
 
 /* partners */
-/* #contents.partner {
-  padding-top: 150px;
-} 2023-05-26 삭제 */
 #contents .partner_cont h4 {
   font-size: 35px;
   margin-bottom: 15px;
@@ -1312,7 +1310,7 @@
   margin-top: 30px;
   font-size: 23px;
   font-weight: 600;
-} /* 2023-05-25 */
+}
 .partner_cont.what ul li p {
   margin-top: 10px;
   color: #7a7a7a;
@@ -1388,7 +1386,7 @@
   display: flex;
   gap: 130px;
   justify-content: center;
-} /* 2023-05-25 */
+}
 
 .partner_cont.story {
   padding: 110px 0 140px;
@@ -2859,7 +2857,8 @@
   padding-top: 85px;
   text-align: center;
   background: url(../images/bg/bg_feature_top.jpg) no-repeat center top;
-}
+  position: relative;
+} /* 2023-06-09 */
 .feature_top .tit {
   font-size: 40px;
   color: #010101;
@@ -3031,7 +3030,8 @@
 .exp_intro .exp_section {
   padding: 100px 0;
   text-align: center;
-}
+  position: relative;
+} /* 2023-06-09 */
 .exp_intro .exp_section.continue {
   padding-top: 30px;
 }
@@ -3706,7 +3706,8 @@
 
 .more_activity {
   padding-top: 60px;
-}
+  margin-bottom: 80px;
+} /* 2023-06-09 */
 .more_activity .tab > ul {
   display: flex;
   justify-content: center;
@@ -4034,7 +4035,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-}
+  margin-bottom: 80px;
+} /* 2023-06-09 */
 .oxf_activity li {
   width: 525px;
   margin: 0 20px;
@@ -4825,7 +4827,8 @@
 .learn_list {
   width: 1000px;
   margin: 0 auto;
-}
+  margin-bottom: 100px;
+} /* 2023-06-09 */
 .learn_list li {
   display: inline-block;
   margin-top: 36px;
@@ -4842,7 +4845,8 @@
 
 .exp_display {
   margin-top: 50px;
-}
+  margin-bottom: 100px;
+} /* 2023-06-09 */
 .exp_display li {
   display: inline-block;
   margin: 0 10px;
@@ -5482,6 +5486,52 @@
 .mathalive .download li .qr {
   width: 75px;
 }
+
+/* [s] 2023-06-09 */
+.try_area {
+  position: relative;
+  margin: 0 -999px;
+  height: 130px;
+}
+.try {
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 90px;
+  background: rgba(33, 65, 175, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1;
+}
+.try.light {
+  background: rgba(255,255,255,0.3
+  );
+}
+.try a {
+  color: #3554be;
+  border-bottom: 1px solid #3554be;
+  display: inline-block;
+  margin-left: 15px;
+  font-weight: 600;
+  position: relative;
+  vertical-align: baseline;
+  cursor: pointer;
+}
+.try a::after {
+  content: "";
+  width: 10px;
+  height: 15px;
+  background: url(../images/ico/ico_next_blue.png);
+  background-size: 100% 100%;
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+  margin-left: 10px;
+}
+/* [e] 2023-06-09 */
 
 /*****************************************************************************************************************************************************************************************/
 
@@ -6609,7 +6659,7 @@
   .partner_cont.profit .link {
     margin-top: 3.03vw;
     gap: 9.848vw;
-  } /* 2023-05-25 */
+  }
 
   .partner_cont.story {
     padding: 8.333vw 0 10.606vw;
@@ -6972,8 +7022,8 @@
 
   .feature_top {
     height: auto;
-    padding-bottom: 70px;
-  }
+    padding-bottom: 110px;
+  } /* 2023-06-09 */
   .feature_top ul li div strong {
     font-size: 18px;
   }
@@ -7638,8 +7688,8 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 31vw;
-  }
+    margin-bottom: 45vw;
+  } /* 2023-06-09 */
   .more_activity .tab {
     width: 27%;
   }
@@ -8235,7 +8285,8 @@
 
   .math_learning_features {
     padding-top: 4.167vw;
-  }
+    margin-bottom: 10.526vw;
+  } /* 2023-06-09 */
   .math_learning_features .depth-1 button {
     height: 5.167vw;
     border-radius: 2.417vw;
@@ -8839,6 +8890,21 @@
     width: 1.1vw;
     background-position-y: 0.8vw;
   }
+
+  /* [s] 2023-06-09 */
+  .try {
+    height: 11.25vw;
+    font-size: 2.917vw;
+  }
+  .try a {
+    margin-left: 0.833vw;
+  }
+  .try a::after {
+    width: 1.167vw;
+    height: 1.833vw;
+    margin-left: 0.833vw;
+  }
+  /* [e] 2023-06-09 */
 }
 
 @media all and (max-width: 768px) {
@@ -8861,9 +8927,6 @@
   #contents {
     padding: 30px 0;
   }
-  /* #contents.partner {
-    padding-top: 110px;
-  } 2023-05-26 삭제 */
   #contents.wrapper {
     padding: 30px 15px;
   }
@@ -9443,8 +9506,8 @@
 
   .exp_display {
     margin-top: 30px;
-    margin-bottom: -30px;
-  }
+    margin-bottom: 50px;
+  } /* 2023-06-09 */
   .exp_display li {
     width: 50%;
     margin-bottom: 30px;
@@ -9652,6 +9715,11 @@
 
   .floating_banner {
     top: 165px;
+  }
+
+  /* 2023-06-09 */
+  .try_area {
+    height: 16.927vw;
   }
 }
 
