@@ -93,8 +93,7 @@ select {
   -moz-appearance: none;
   appearance: none;
   border: 1px solid #b7b7b7;
-  background: #fff url(../images/icon/select_arrow.jpg) right 14px center
-    no-repeat;
+  background: #fff url(../images/icon/select_arrow.jpg) right 14px center no-repeat;
   transition: border-color 0.3s ease;
 }
 select::-ms-expand {
@@ -1655,73 +1654,37 @@ body.fix #wrap {
 }
 
 /* fresh chatbot */
-/* [s] 2023-06-09 */
+/* [s] 2023-06-22 */
 #custom_chat_button {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  height: 65px;
-  background: url(../images/ico/ico_chatbot.png) no-repeat;
-  width: 76px;
+  height: 79px;
+  background: url(../images/ico/chatbot.gif) no-repeat;
+  width: 205px;
   background-size: 100%;
   z-index: 99999999999;
 }
 #custom_chat_button .menu {
   position: absolute;
-  right: 100%;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #fff;
-  margin-right: 15px;
-  border-radius: 5px;
-  width: 145px;
-}
-#custom_chat_button .menu::after {
-  content: "";
-  border-left: 5px solid #fff;
-  border-top: 3px solid transparent;
-  border-bottom: 3px solid transparent;
-  position: absolute;
-  left: 100%;
-  top: 50%;
-  transform: translateY(-50%);
-}
-#custom_chat_button .menu ul {
-  padding: 0 14px;
+  top: 20px;
+  left: 0;
+  width: 120px;
 }
 #custom_chat_button .menu li {
-  white-space: nowrap;
-  line-height: 32px;
-  font-size: 15px;
-  color: #2b4580;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  font-size: 0;
+  line-height: 27px;
   cursor: pointer;
-}
-#custom_chat_button .menu li::after {
-  content: "";
-  width: 10px;
-  height: 13px;
-  background: url(../images/ico/ico_arrow_blue.png);
-  background-size: 100%;
-}
-#custom_chat_button .menu li + li {
-  border-top: 2px solid #d7dce7;
 }
 #custom_chat_button .close {
   font-size: 0;
   position: absolute;
-  bottom: 100%;
+  top: 0;
   right: 0;
   width: 12px;
   height: 12px;
-  background: url(../images/ico/ico_close_blue.png);
-  background-size: 100%;
-  margin-bottom: 5px;
 }
-/* [e] 2023-06-09 */
+/* [e] 2023-06-22 */
 
 .trial_banner {
   margin-top: 90px;
@@ -1785,7 +1748,6 @@ body.fix #wrap {
   margin-bottom: 35px;
 }
 
-/* [s] 2023-06-09 */
 #contact_pop .popup {
   width: min(1000px, 90%);
   background: #fff;
@@ -1868,7 +1830,6 @@ body.fix #wrap {
   margin: 30px auto 0;
   display: block;
 }
-/* [e] 2023-06-09 */
 
 /*****************************************************************************************************************************************************************************************/
 
@@ -2081,7 +2042,6 @@ body.fix #wrap {
     width: 106px;
   }
 
-  /* [s] 2023-06-09 */
   #contact_pop .popup {
     width: 101%;
     height: 101%;
@@ -2145,7 +2105,6 @@ body.fix #wrap {
   #contact_pop .pop_close {
     display: none;
   }
-  /* [e] 2023-06-09 */
 }
 
 @media all and (max-width: 830px) {
