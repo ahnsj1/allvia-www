@@ -49,11 +49,7 @@ $(function () {
 
     if (subTop.is(":visible")) {
       if (subtopSub.is(":visible")) {
-        topArea =
-          header.height() +
-          subTop.outerHeight() +
-          subtopSub.height() +
-          topFloat.height();
+        topArea = header.height() + subTop.outerHeight() + subtopSub.height() + topFloat.height();
       } else {
         topArea = header.height() + subTop.outerHeight() + topFloat.height();
       }
@@ -159,27 +155,37 @@ $(function () {
   //select
   $("select").selectric();
 
-  const policy_lang_cont = document.querySelectorAll(
-    "#policy_cont .policy_lang_cont"
-  );
-  const policy_select_option = document.querySelectorAll(
-    "#policy_cont .selectric-items li"
-  );
+  // 2023-06-22 공통 함수로 묶어 실행
+  const showDefaultLang = (contents) => {
+    contents.forEach((content) => {
+      if (content.classList.contains("en")) content.style.display = "block";
+      else content.style.display = "none";
+    });
+  };
 
-  policy_lang_cont.forEach((content) => {
-    if (content.classList.contains("en")) content.style.display = "block";
-    else content.style.display = "none";
-  });
-
-  policy_select_option.forEach((opt) => {
-    opt.addEventListener("click", () => {
-      const opt_index = opt.getAttribute("data-index");
-      policy_lang_cont.forEach((content, cont_idx) => {
-        if (cont_idx === +opt_index) content.style.display = "block";
-        else content.style.display = "none";
+  const clickLangOption = (option, contents) => {
+    option.forEach((opt) => {
+      opt.addEventListener("click", () => {
+        const opt_index = opt.getAttribute("data-index");
+        contents.forEach((content, cont_idx) => {
+          if (cont_idx === +opt_index) content.style.display = "block";
+          else content.style.display = "none";
+        });
       });
     });
-  });
+  };
+
+  const policy_lang_cont = document.querySelectorAll("#policy_cont .policy_lang_cont");
+  const policy_select_option = document.querySelectorAll("#policy_cont .selectric-items li");
+
+  showDefaultLang(policy_lang_cont);
+  clickLangOption(policy_select_option, policy_lang_cont);
+
+  const signup_agree_cont = document.querySelectorAll("#signup_agree_form .agree_list");
+  const signup_agree_option = document.querySelectorAll("#signup_agree_form .selectric-items li");
+
+  showDefaultLang(signup_agree_cont);
+  clickLangOption(signup_agree_option, signup_agree_cont);
 
   //서브하위메뉴 노출시 여백추가
   if ($(".subtop_sub").is(":visible")) {
@@ -201,25 +207,17 @@ $(function () {
     chkbox.each(function () {
       $(this).on("change", function () {
         var chkboxLen = chkbox.length,
-          chkLen = $this
-            .find('input[type="checkbox"]:checked')
-            .not(".allchk").length;
-        chkboxLen == chkLen
-          ? allChk.prop("checked", true)
-          : allChk.prop("checked", false);
+          chkLen = $this.find('input[type="checkbox"]:checked').not(".allchk").length;
+        chkboxLen == chkLen ? allChk.prop("checked", true) : allChk.prop("checked", false);
       });
     });
 
     allChk.on("change", function () {
-      $(this).prop("checked")
-        ? chkbox.prop("checked", true)
-        : chkbox.prop("checked", false);
+      $(this).prop("checked") ? chkbox.prop("checked", true) : chkbox.prop("checked", false);
     });
   });
 
-  var mobile = /iphone|ipad|ipod|android/i.test(
-    navigator.userAgent.toLowerCase()
-  );
+  var mobile = /iphone|ipad|ipod|android/i.test(navigator.userAgent.toLowerCase());
 
   if (mobile) {
     //navigator.userAgent에 /iphone|ipad|ipod|android 의 단어포함이 true 일때
@@ -227,11 +225,7 @@ $(function () {
     var userAgent = navigator.userAgent.toLowerCase();
     if (userAgent.search("android") > -1) {
       //안드로이드
-    } else if (
-      userAgent.search("iphone") > -1 ||
-      userAgent.search("ipod") > -1 ||
-      userAgent.search("ipad") > -1
-    ) {
+    } else if (userAgent.search("iphone") > -1 || userAgent.search("ipod") > -1 || userAgent.search("ipad") > -1) {
       $(".inp_chk, .inp_radio").addClass("inp_ios");
     }
   } else {
@@ -367,9 +361,7 @@ $(function () {
     ebooktab = ebookwrap.find(".tab_box > div"),
     ebooktabSub = ebooktab.find(".inner");
   // ebooklink = ebooktabSub.find('> li > a'),
-  (ebooklink = ebookwrap.find(".ebooklink")),
-    (nolink = ebookwrap.find(".nolink")),
-    (ebookBox = ebookwrap.find(".tab_con .ebook_tabbox"));
+  (ebooklink = ebookwrap.find(".ebooklink")), (nolink = ebookwrap.find(".nolink")), (ebookBox = ebookwrap.find(".tab_con .ebook_tabbox"));
 
   ebooktab.on({
     mouseenter: function (e) {
@@ -392,14 +384,7 @@ $(function () {
     ebooktab.addClass("off");
     thisTab.removeClass("off");
     ebooktabSub.hide();
-    ebookBox
-      .find("iframe")
-      .attr(
-        "src",
-        "https://book.allviaedu.com/view/index.html?contbase=/" +
-          thisEbook +
-          "/&title=abcd&viewtype=html5"
-      );
+    ebookBox.find("iframe").attr("src", "https://book.allviaedu.com/view/index.html?contbase=/" + thisEbook + "/&title=abcd&viewtype=html5");
   });
 
   nolink.on("click", function (e) {
@@ -431,11 +416,7 @@ $(function () {
 
   if (subtopSub.is(":visible")) {
     if (topFloat.is(":visible")) {
-      topHeight =
-        header.height() +
-        subTop.outerHeight() +
-        subtopSub.height() +
-        topFloat.height();
+      topHeight = header.height() + subTop.outerHeight() + subtopSub.height() + topFloat.height();
     } else {
       topHeight = header.height() + subTop.outerHeight() + subtopSub.height();
     }
@@ -488,10 +469,7 @@ $(function () {
     e.preventDefault();
     var selectBro = $('.bro_radio input[type="radio"]:checked').attr("id");
     console.log(selectBro);
-    window.open("about:blank").location.href =
-      "https://book.allviaedu.com/view/index.html?contbase=/" +
-      selectBro +
-      "/&title=abcd";
+    window.open("about:blank").location.href = "https://book.allviaedu.com/view/index.html?contbase=/" + selectBro + "/&title=abcd";
   });
 
   //price anchor
@@ -518,26 +496,17 @@ $(function () {
     var paddingBottom = parseInt($(".price01").css("padding-bottom"));
 
     var spot02, spot03, spot04;
-    if ($(".price02").length !== 0)
-      spot02 = $(".price02").offset().top - topArea - paddingBottom;
-    if ($(".price03").length !== 0)
-      spot03 = $(".price03").offset().top - topArea - paddingBottom;
-    if ($(".price04").length !== 0)
-      spot04 = $(".price04").offset().top - topArea - paddingBottom;
+    if ($(".price02").length !== 0) spot02 = $(".price02").offset().top - topArea - paddingBottom;
+    if ($(".price03").length !== 0) spot03 = $(".price03").offset().top - topArea - paddingBottom;
+    if ($(".price04").length !== 0) spot04 = $(".price04").offset().top - topArea - paddingBottom;
 
     $(".anchor li").removeClass("on");
 
     if ($("html, body").scrollTop() < spot02) {
       $(".anchor li:nth-child(1)").addClass("on");
-    } else if (
-      spot02 <= $("html, body").scrollTop() &&
-      $("html, body").scrollTop() < spot03
-    ) {
+    } else if (spot02 <= $("html, body").scrollTop() && $("html, body").scrollTop() < spot03) {
       $(".anchor li:nth-child(2)").addClass("on");
-    } else if (
-      spot03 <= $("html, body").scrollTop() &&
-      $("html, body").scrollTop() < spot04
-    ) {
+    } else if (spot03 <= $("html, body").scrollTop() && $("html, body").scrollTop() < spot04) {
       $(".anchor li:nth-child(3)").addClass("on");
     } else if (spot04 <= $("html, body").scrollTop()) {
       $(".anchor li:nth-child(4)").addClass("on");
@@ -587,10 +556,7 @@ $(function () {
           if (yesInp.prop("tagName") == "INPUT") {
             yesInp.addClass("disable").attr("disabled", "disabled");
           } else {
-            yesInp
-              .addClass("disable")
-              .find("input")
-              .attr("disabled", "disabled");
+            yesInp.addClass("disable").find("input").attr("disabled", "disabled");
           }
         }
       });
