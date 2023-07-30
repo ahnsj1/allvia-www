@@ -4240,7 +4240,10 @@
   font-weight: 300;
   font-size: inherit;
 }
-/* [s] 2023-07-21 */
+/* [s] 2023-07-25 */
+.exp_intro.challenge .logo {
+  height: 162px;
+}
 #contents .exp_intro.challenge h4 {
   font-size: 40px;
 }
@@ -4415,7 +4418,86 @@
   width: 100%;
   padding: 56.25% 0 0 0;
 }
-/* [e] 2023-07-21 */
+
+.challenge_global {
+  height: 843px;
+  background: url(../images/bg/bg_challenge_global.png);
+  text-align: center;
+  padding-top: 115px;
+}
+#contents .exp_intro.challenge .challenge_global h4 {
+  color: #fff;
+}
+.challenge_global .content {
+  padding-top: 60px;
+  max-width: 1320px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.challenge_global .con1 {
+  position: relative;
+}
+.challenge_global .con1 p {
+  font-size: 20px;
+  color: #fff;
+  position: absolute;
+  bottom: 8px;
+  left: 408px;
+  width: 500px;
+  text-align: left;
+  font-weight: 300;
+}
+.challenge_global .con2 {
+  padding-top: 20px;
+}
+.challenge_global .con2 h6 {
+  font-size: 24px;
+  color: #fff;
+}
+.challenge_global .con2 .paper {
+  position: relative;
+  z-index: 1;
+  width: 328px;
+  height: 398px;
+  margin-top: 10px;
+}
+.challenge_global .con2 .paper .bg {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border: 1px solid #000;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.challenge_global .con2 .paper .bg::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #dfdfdf;
+  border: 1px solid #000;
+  z-index: -1;
+}
+.challenge_global .con2 .paper img {
+  width: 100%;
+}
+.challenge_global .con2 .paper p {
+  font-size: 20px;
+  color: #041a72;
+  font-weight: 300;
+}
+.challenge_global .con2 .paper p b {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+/* [e] 2023-07-25 */
 
 .math_learning_features {
   display: flex;
@@ -5174,7 +5256,7 @@
   padding-top: 46px;
   margin-top: 0;
   box-sizing: content-box;
-} /* 2023-07-24 */
+} /* 2023-07-25 */
 .ebook_wrap .tab_con > div {
   display: none;
 }
@@ -5667,6 +5749,27 @@
 .mathalive .download li .qr {
   width: 75px;
 }
+
+/* [s] 2023-07-25 */
+.challenge .app_ban {
+  background: url(../images/bg/bg_appbanner_challenge.png) 80% top no-repeat;
+}
+.challenge .app_ban p {
+  color: #fff;
+  text-shadow: 0px 3px 0px rgba(0, 0, 0, 0.42);
+  font-size: 40px;
+}
+.app_ban .download li a {
+  width: 231px;
+  height: 67px;
+}
+.app_ban .download li a.ios {
+  background-image: url(../images/ico/ico_store_ios_b.png);
+}
+.app_ban .download li a.aos {
+  background-image: url(../images/ico/ico_store_aos_b.png);
+}
+/* [e] 2023-07-25 */
 
 .try_area {
   position: relative;
@@ -6972,6 +7075,139 @@
     border-radius: 0.303vw;
     padding: 1.136vw 4.167vw 1.136vw 2.803vw;
   }
+
+  /* [s] 2023-07-25 */
+  .exp_intro.challenge .logo {
+    height: 12.273vw;
+  }
+  .exp_intro.challenge .top_img {
+    height: 45.227vw;
+  }
+  #contents .exp_intro.challenge h4 {
+    font-size: 3.03vw;
+  }
+  #contents .exp_intro.challenge .exp_top h4 {
+    padding-top: 6.061vw;
+  }
+  #contents .exp_intro.challenge .exp_top h4::before {
+    width: 3.03vw;
+    height: 0.909vw;
+    border-radius: 0.455vw;
+    top: 2.273vw;
+  }
+  .exp_intro.challenge .exp_section > h4 + p {
+    font-size: 1.894vw;
+  }
+  .exp_intro.challenge .exp_top {
+    padding: 9.091vw 0 6.818vw;
+  }
+  .exp_intro.challenge .exp_top > p {
+    font-size: 1.894vw;
+    margin-bottom: 6.061vw;
+  }
+  .challenge_digital_img {
+    margin-top: 3.788vw;
+  }
+  .challenge_content {
+    padding-top: 3.788vw;
+  }
+  .challenge_content nav {
+    height: 4.697vw;
+    border-radius: 2.348vw;
+  }
+  .challenge_content nav button {
+    width: 18.864vw;
+    font-size: 1.667vw;
+  }
+  .challenge_content nav button:not(:first-child)::before {
+    width: 2px;
+    height: 1.667vw;
+  }
+  .challenge_content .content {
+    padding-top: 3.03vw;
+  }
+  .challenge_content .content > div > h5 {
+    font-size: 1.667vw;
+  }
+  .challenge_content .content > div > p {
+    font-size: 1.667vw;
+    margin-top: 1.136vw;
+  }
+  .challenge_content .img_wrap {
+    margin-top: 3.409vw;
+    gap: 3.03vw 1.364vw;
+  }
+  .challenge_content .img_wrap li {
+    width: 32.424vw;
+  }
+  .challenge_content .img_wrap h6 {
+    font-size: 1.515vw;
+    padding-top: 0.758vw;
+  }
+  .challenge_content .img_wrap p {
+    font-size: 1.515vw;
+  }
+  .challenge_curriculum img {
+    margin-top: 5.303vw;
+  }
+  .challenge_curriculum .download {
+    margin-top: 5.682vw;
+    padding: 0 1.97vw;
+    height: 3.258vw;
+    border-radius: 1.591vw;
+    gap: 0.758vw;
+  }
+  .challenge_curriculum .download::after {
+    width: 1.667vw;
+    height: 1.667vw;
+  }
+  .challenge_global {
+    height: 63.864vw;
+    padding-top: 8.712vw;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .challenge_global .content {
+    padding-top: 4.545vw;
+  }
+  .challenge_global .con1 img {
+    height: 35.682vw;
+  }
+  .challenge_global .con1 p {
+    font-size: 1.515vw;
+    bottom: 0.606vw;
+    left: 30.909vw;
+    width: 37.879vw;
+  }
+  .challenge_global .con2 {
+    padding-top: 1.515vw;
+  }
+  .challenge_global .con2 h6 {
+    font-size: 1.818vw;
+  }
+  .challenge_global .con2 .paper {
+    width: 24.848vw;
+    height: 30.152vw;
+    margin-top: 0.758vw;
+  }
+  .challenge_global .con2 .paper .bg {
+    padding: 1.515vw;
+  }
+  .challenge_global .con2 .paper .bg::before {
+    top: 0.758vw;
+    left: 0.758vw;
+  }
+  .challenge_global .con2 .paper p {
+    font-size: 1.515vw;
+  }
+  .challenge_global .con2 .paper p b {
+    margin-top: 1.136vw;
+    margin-bottom: 0.758vw;
+  }
+  .ebook_wrap .tab_con.bg_white {
+    padding-top: 0;
+  }
+  /* [e] 2023-07-25 */
 }
 
 @media all and (max-width: 1200px) {
@@ -9081,6 +9317,175 @@
     height: 1.833vw;
     margin-left: 0.833vw;
   }
+
+  /* [s] 2023-07-25 */
+  .exp_intro.challenge .logo {
+    height: 16.667vw;
+  }
+  .exp_intro.challenge .exp_top > i {
+    width: auto;
+  }
+  #contents .exp_intro.challenge .exp_top h4 {
+    padding-top: 8.333vw;
+    font-size: 3.75vw;
+  }
+  #contents .exp_intro.challenge .exp_top h4::before {
+    width: 4.083vw;
+    height: 1.15vw;
+    border-radius: 0.583vw;
+    top: 4.167vw;
+  }
+  .exp_intro.challenge .exp_top > p {
+    font-size: 2.917vw;
+    margin-bottom: 8.333vw;
+  }
+  .exp_intro.challenge .top_img {
+    height: 48.333vw;
+  }
+  #contents .exp_intro.challenge h4 {
+    font-size: 3.75vw;
+  }
+  .exp_intro.challenge .exp_section > h4 + p {
+    font-size: 2.917vw;
+  }
+  .challenge_digital_img {
+    margin: 2.917vw auto 0;
+    height: 67.667vw;
+  }
+  .challenge_content {
+    padding-top: 4.583vw;
+  }
+  .challenge_content nav {
+    height: 6.5vw;
+    border-radius: 3.25vw;
+  }
+  .challenge_content nav button {
+    width: 28.583vw;
+    font-size: 2.5vw;
+  }
+  .challenge_content nav button:not(:first-child)::before {
+    width: 0.167vw;
+    height: 2.333vw;
+  }
+  .challenge_content .content {
+    padding-top: 4.167vw;
+  }
+  .challenge_content .content > div > h5 {
+    font-size: 2.5vw;
+  }
+  .challenge_content .content > div > p {
+    font-size: 2.333vw;
+    margin-top: 1.25vw;
+  }
+  .challenge_content .img_wrap {
+    margin-top: 2.5vw;
+    gap: 0.833vw 1.667vw;
+  }
+  .challenge_content .img_wrap li {
+    width: 27.833vw;
+  }
+  .challenge_content .img_wrap h6 {
+    font-size: 1.667vw;
+    padding-top: 0.417vw;
+  }
+  .challenge_content .img_wrap p {
+    font-size: 1.667vw;
+  }
+  .challenge_curriculum .download {
+    margin-top: 3.333vw;
+    padding: 0 2.917vw;
+    height: 6.667vw;
+    border-radius: 3.333vw;
+    gap: 0.833vw;
+    font-size: 2.5vw;
+  }
+  .challenge_curriculum .download::after {
+    width: 3vw;
+    height: 3vw;
+  }
+  .challenge_global {
+    height: 126.083vw;
+    padding-top: 7.5vw;
+    padding-left: 7.5vw;
+    padding-right: 7.5vw;
+    background: url(../images/bg/bg_challenge_global_m.png);
+    background-size: cover;
+  }
+  .challenge_global .content {
+    padding-top: 2.083vw;
+    flex-direction: column;
+    align-items: center;
+  }
+  .challenge_global .con1 img {
+    height: 39.333vw;
+    margin: 0 auto;
+  }
+  .challenge_global .con1 p {
+    font-size: 2.917vw;
+    position: relative;
+    bottom: auto;
+    left: auto;
+    width: 73.333vw;
+    text-align: center;
+    margin-top: 2.083vw;
+  }
+  .challenge_global .con2 {
+    padding-top: 2.5vw;
+    width: 100%;
+  }
+  .challenge_global .con2 h6 {
+    font-size: 2.667vw;
+    text-align: left;
+  }
+  .challenge_global .con2 .paper {
+    width: 100%;
+    height: 28.25vw;
+    margin-top: 0;
+  }
+  .challenge_global .con2 .paper .bg {
+    padding: 4.583vw 0 4.583vw 4.167vw;
+    display: flex;
+    align-items: center;
+  }
+  .challenge_global .con2 .paper .bg::before {
+    top: 0.833vw;
+    left: 0.833vw;
+  }
+  .challenge_global .con2 .paper p {
+    font-size: 2.667vw;
+    flex: 1;
+    text-align: center;
+    padding: 0 6.25vw;
+  }
+  .challenge_global .con2 .paper p b {
+    margin: 0;
+  }
+  .challenge_global .con2 .paper img {
+    width: auto;
+    height: 100%;
+  }
+  .solution_video a strong {
+    padding-bottom: 100px;
+    padding-top: 0;
+    font-size: 24px;
+    background-size: 70px;
+  }
+  .challenge .app_ban {
+    background-image: url(../images/bg/bg_appbanner_challenge_m.png);
+    background-size: cover;
+  }
+  .challenge .app_ban p {
+    text-shadow: none;
+    font-size: 2.667vw;
+  }
+  .challenge .app_ban p b {
+    font-size: 3.667vw;
+  }
+  .app_ban .download li a {
+    width: 20.25vw;
+    height: 5.833vw;
+  }
+  /* [e] 2023-07-25 */
 }
 
 @media all and (max-width: 768px) {
@@ -9896,6 +10301,20 @@
   .try_area {
     height: 16.927vw;
   }
+
+  /* [s] 2023-07-25 */
+  .challenge_content .img_wrap p {
+    font-size: 1.667vw;
+  }
+  .solution_video a strong {
+    padding-bottom: 70px;
+    font-size: 12px;
+    background-size: 48px;
+  }
+  #contents .exp_intro.challenge .challenge_global h4 {
+    margin-bottom: 0;
+  }
+  /* [e] 2023-07-25 */
 }
 
 @media all and (max-width: 740px) {
