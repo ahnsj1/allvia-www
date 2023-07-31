@@ -4579,6 +4579,10 @@
   border: 1px solid #000;
   z-index: -1;
 }
+.challenge_global .con2 .paper .bg a {
+  position: absolute;
+  inset: 0;
+} /* 2023-07-31 */
 .challenge_global .con2 .paper img {
   width: 100%;
 }
@@ -7295,8 +7299,8 @@
     width: 38.182vw;
   }
   .challenge_curriculum img {
-    width: 22.197vw;
-  }
+    height: 35.076vw;
+  } /* 2023-07-31 */
   /* [e] 2023-07-31 */
   .challenge_curriculum .download {
     margin-top: 5.682vw;
@@ -9559,8 +9563,8 @@
   }
   .challenge_curriculum .content img {
     margin-top: -5.833vw;
-    width: 28.167vw;
-  }
+    height: 43.667vw;
+  } /* 2023-07-31 */
   .challenge_curriculum .curriculum li {
     gap: 1.667vw;
   }
