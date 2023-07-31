@@ -4352,14 +4352,102 @@
 .ebook_wrap.challenge .tab_box > div.tab03 > a {
   background: #0089c7;
 }
+/* [s] 2023-07-31 */
 .challenge_curriculum {
+  padding-top: 70px;
+}
+.challenge_curriculum .content {
+  display: flex;
+  align-items: flex-end;
+  max-width: 1320px;
+  margin: 0 auto;
+  gap: 55px;
+}
+.challenge_curriculum .curriculum {
+  flex: 1;
   display: flex;
   flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+.challenge_curriculum .curriculum::before {
+  content: "";
+  width: 47px;
+  height: 331px;
+  background: url(../images/pic/pic_challenge_curriculum_line.png);
+  background-size: 100% 100%;
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-right: 15px;
+}
+.challenge_curriculum .curriculum::after {
+  display: none;
+}
+.challenge_curriculum .curriculum li {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.challenge_curriculum .curriculum li > div {
+  height: 156px;
+  border-radius: 20px;
+  display: flex;
   align-items: center;
 }
-.challenge_curriculum img {
-  margin-top: 70px;
+.challenge_curriculum .step_box {
+  width: 210px;
+  background: #263052;
+  flex-direction: column;
+  justify-content: center;
+  gap: 7px;
 }
+.challenge_curriculum .step_box .step {
+  padding: 0 20px;
+  height: 44px;
+  line-height: 44px;
+  font-size: 25px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 22px;
+}
+.challenge_curriculum .step_box p {
+  font-size: 22px;
+  color: #fff;
+}
+.challenge_curriculum .color_box {
+  font-size: 25px;
+  color: #fff;
+  justify-content: center;
+}
+.challenge_curriculum .no_box {
+  font-size: 25px;
+  color: #000;
+  flex: 1;
+  text-align: left;
+}
+.challenge_curriculum .curriculum li:nth-child(1) .step {
+  color: #db354a;
+}
+.challenge_curriculum .curriculum li:nth-child(1) .color_box {
+  background: #dc354a;
+  width: 238px;
+}
+.challenge_curriculum .curriculum li:nth-child(2) .step {
+  color: #0089c7;
+}
+.challenge_curriculum .curriculum li:nth-child(2) .color_box {
+  background: #0089c7;
+  width: 372px;
+}
+.challenge_curriculum .curriculum li:nth-child(3) .step {
+  color: #26a465;
+}
+.challenge_curriculum .curriculum li:nth-child(3) .color_box {
+  background: #26a465;
+  width: 504px;
+}
+/* [e] 2023-07-31 */
 .challenge_curriculum .download {
   background: #001a72;
   margin-top: 75px;
@@ -4418,6 +4506,14 @@
   width: 100%;
   padding: 56.25% 0 0 0;
 }
+/* [s] 2023-07-31 */
+.challenge .solution_video a {
+  background: rgba(0, 0, 0, 0.4);
+}
+.challenge .solution_video a strong {
+  background-position: center center;
+}
+/* [e] 2023-07-31 */
 
 .challenge_global {
   height: 843px;
@@ -7147,9 +7243,61 @@
   .challenge_content .img_wrap p {
     font-size: 1.515vw;
   }
-  .challenge_curriculum img {
-    margin-top: 5.303vw;
+  /* [s] 2023-07-31 */
+  .challenge_curriculum {
+    padding-top: 5.303vw;
   }
+  .challenge_curriculum .content {
+    gap: 4.167vw;
+  }
+  .challenge_curriculum .curriculum {
+    gap: 1.515vw;
+  }
+  .challenge_curriculum .curriculum::before {
+    width: 3.561vw;
+    height: 25.076vw;
+    margin-right: 1.136vw;
+  }
+  .challenge_curriculum .curriculum li {
+    gap: 1.515vw;
+  }
+  .challenge_curriculum .curriculum li > div {
+    height: 11.818vw;
+    border-radius: 1.515vw;
+  }
+  .challenge_curriculum .step_box {
+    width: 15.909vw;
+    gap: 0.53vw;
+  }
+  .challenge_curriculum .step_box .step {
+    padding: 0 1.515vw;
+    height: 3.333vw;
+    line-height: 3.333vw;
+    font-size: 1.894vw;
+    border-radius: 1.667vw;
+  }
+  .challenge_curriculum .step_box p {
+    font-size: 1.667vw;
+  }
+  .challenge_curriculum .color_box {
+    font-size: 1.894vw;
+  }
+  .challenge_curriculum .no_box {
+    font-size: 1.894vw;
+  }
+  .challenge_curriculum .curriculum li:nth-child(1) .color_box {
+    width: 18.03vw;
+  }
+  .challenge_curriculum .curriculum li:nth-child(2) .color_box {
+    width: 28.182vw;
+  }
+  .challenge_curriculum .curriculum li:nth-child(3) .color_box {
+    width: 38.182vw;
+  }
+  .challenge_curriculum img {
+    width: 22.197vw;
+  }
+  /* [e] 2023-07-31 */
   .challenge_curriculum .download {
     margin-top: 5.682vw;
     padding: 0 1.97vw;
@@ -9391,6 +9539,67 @@
   .challenge_content .img_wrap p {
     font-size: 1.667vw;
   }
+  /* [s] 2023-07-31 */
+  .challenge_curriculum {
+    padding-top: 5.833vw;
+    margin: 0 5.417vw;
+  }
+  .challenge_curriculum .curriculum {
+    gap: 1.667vw;
+  }
+  .challenge_curriculum .curriculum::before {
+    width: 3.5vw;
+    height: 27.583vw;
+    margin-right: 0;
+  }
+  .challenge_curriculum .content {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+  .challenge_curriculum .content img {
+    margin-top: -5.833vw;
+    width: 28.167vw;
+  }
+  .challenge_curriculum .curriculum li {
+    gap: 1.667vw;
+  }
+  .challenge_curriculum .curriculum li > div {
+    height: 13vw;
+    border-radius: 1.667vw;
+  }
+  .challenge_curriculum .curriculum li > div + div {
+    margin-top: 0 !important;
+  }
+  .challenge_curriculum .step_box {
+    width: 19.333vw;
+  }
+  .challenge_curriculum .step_box .step {
+    padding: 0 1.833vw;
+    height: 3.667vw;
+    line-height: 3.667vw;
+    font-size: 2.5vw;
+    border-radius: 1.833vw;
+  }
+  .challenge_curriculum .step_box p {
+    font-size: 2.167vw !important;
+  }
+  .challenge_curriculum .color_box {
+    font-size: 2.333vw;
+  }
+  .challenge_curriculum .no_box {
+    font-size: 2.333vw;
+  }
+  .challenge_curriculum .curriculum li:nth-child(1) .color_box {
+    width: 19.833vw;
+  }
+  .challenge_curriculum .curriculum li:nth-child(2) .color_box {
+    width: 31vw;
+  }
+  .challenge_curriculum .curriculum li:nth-child(3) .color_box {
+    width: 42vw;
+  }
+  /* [e] 2023-07-31 */
   .challenge_curriculum .download {
     margin-top: 3.333vw;
     padding: 0 2.917vw;
