@@ -4288,7 +4288,6 @@
   font-weight: 300;
   font-size: inherit;
 }
-/* [s] 2023-07-25 */
 .exp_intro.challenge .logo {
   height: 162px;
 }
@@ -4645,7 +4644,6 @@
   margin-bottom: 10px;
   font-weight: 500;
 }
-/* [e] 2023-07-25 */
 
 .math_learning_features {
   display: flex;
@@ -5404,7 +5402,7 @@
   padding-top: 46px;
   margin-top: 0;
   box-sizing: content-box;
-} /* 2023-07-25 */
+}
 .ebook_wrap .tab_con > div {
   display: none;
 }
@@ -5898,7 +5896,6 @@
   width: 75px;
 }
 
-/* [s] 2023-07-25 */
 .challenge .app_ban {
   background: url(../images/bg/bg_appbanner_challenge.png) 80% top no-repeat;
 }
@@ -5917,7 +5914,6 @@
 .app_ban .download li a.aos {
   background-image: url(../images/ico/ico_store_aos_b.png);
 }
-/* [e] 2023-07-25 */
 
 .try_area {
   position: relative;
@@ -6047,6 +6043,7 @@
   width: 92px;
   height: 145px;
   background: url(../images/pic/pic_welcome_evt1.png);
+  background-size: 100% 100%;
   position: absolute;
   bottom: 8px;
   left: -35px;
@@ -6056,6 +6053,7 @@
   width: 94px;
   height: 74px;
   background: url(../images/pic/pic_welcome_evt2.png);
+  background-size: 100% 100%;
   position: absolute;
   top: 12px;
   right: -44px;
@@ -6067,7 +6065,7 @@
   justify-content: center;
   position: relative;
 }
-.welcome_cont .event a::before {
+.welcome_cont .event a::after {
   content: "";
   width: 16px;
   height: 27px;
@@ -7349,7 +7347,6 @@
     padding: 1.136vw 4.167vw 1.136vw 2.803vw;
   }
 
-  /* [s] 2023-07-25 */
   .exp_intro.challenge .logo {
     height: 12.273vw;
   }
@@ -7532,7 +7529,70 @@
   .ebook_wrap .tab_con.bg_white {
     padding-top: 0;
   }
-  /* [e] 2023-07-25 */
+
+  /* WELCOME! */
+  /* [s] 2023-09-18 */
+  .welcome_cont {
+    gap: 1.515vw;
+    margin: 6.061vw -4.545vw auto;
+  }
+  .welcome_cont > div {
+    height: 26.667vw;
+  }
+  .welcome_cont > div > img {
+    margin: 0 2.652vw;
+    height: 20vw;
+  }
+  .welcome_cont h5 {
+    font-size: 2.273vw;
+    margin-bottom: 0.758vw;
+  }
+  .welcome_cont p {
+    font-size: 1.515vw;
+  }
+  .welcome_cont button {
+    width: 15.152vw;
+    height: 3.864vw;
+    border-radius: 1.894vw;
+    margin-top: 1.894vw;
+    padding-left: 1.515vw;
+    font-size: 1.136vw;
+  }
+  .welcome_cont button::before {
+    width: 0.833vw;
+    height: 1.364vw;
+    inset: 0 1.515vw 0 auto;
+  }
+  .welcome_cont .event {
+    inset: 2.879vw 5.682vw 2.879vw auto;
+    border-radius: 1.061vw;
+    width: 37.121vw;
+  }
+  .welcome_cont .event::before {
+    width: 6.97vw;
+    height: 10.985vw;
+    bottom: 0.606vw;
+    left: -2.652vw;
+  }
+  .welcome_cont .event::after {
+    width: 7.121vw;
+    height: 5.606vw;
+    top: 0.909vw;
+    right: -3.333vw;
+  }
+  .welcome_cont .event a::after {
+    width: 1.212vw;
+    height: 2.045vw;
+    bottom: 2.121vw;
+    right: 2.121vw;
+  }
+  .welcome_cont .event h5 {
+    font-size: 2.121vw;
+  }
+  .welcome_cont .event p {
+    font-size: 1.515vw;
+  }
+  /* [e] 2023-09-18 */
 }
 
 @media all and (max-width: 1200px) {
@@ -9664,7 +9724,6 @@
     margin-left: 0.833vw;
   }
 
-  /* [s] 2023-07-25 */
   .exp_intro.challenge .logo {
     height: 16.667vw;
   }
@@ -9892,7 +9951,110 @@
     width: 20.25vw;
     height: 5.833vw;
   }
-  /* [e] 2023-07-25 */
+
+  /* WELCOME! */
+  /* [s] 2023-09-18 */
+  .welcome_cont {
+    gap: 1.333vw;
+    margin: 5vw auto auto;
+    width: 85.833vw;
+  }
+  .welcome_cont > div {
+    height: 48.5vw;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 5%;
+    padding-right: 50%;
+    background-image: url(../images/bg/bg_wel_blue_m.png);
+  }
+  .welcome_cont > div > img {
+    margin: 0;
+    height: 23.167vw;
+    position: relative;
+    top: -0.833vw;
+  }
+  .welcome_cont h5 {
+    font-size: 3vw;
+    margin-bottom: 0.833vw;
+    text-align: center;
+  }
+  .welcome_cont p {
+    font-size: 2.167vw;
+    text-align: center;
+  }
+  .welcome_cont button {
+    width: 23.333vw;
+    height: 5.833vw;
+    border-radius: 2.917vw;
+    display: block;
+    margin: 2.083vw auto 0;
+    padding-left: 2.5vw;
+    font-size: 2.167vw;
+  }
+  .welcome_cont button::before {
+    width: 1.167vw;
+    height: 2.083vw;
+    inset: 0 2.5vw 0 auto;
+  }
+  .welcome_cont > div.half {
+    background: transparent;
+    padding-right: 0;
+  }
+  .welcome_cont > div.half::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 0.417vw solid #ededf3;
+  }
+  .welcome_cont > div.half::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 0.167vw solid #e0e0e3;
+  }
+  .welcome_cont > div.half.conversion > img {
+    top: 2.5vw;
+  }
+  .welcome_cont > div.half.blog > img {
+    top: 0.833vw;
+  }
+  .welcome_cont .event {
+    inset: 5.417vw 7vw 7.5vw auto;
+    border-radius: 1.167vw;
+    width: 33.583vw;
+  }
+  .welcome_cont .event::before {
+    width: 7.667vw;
+    height: 12.083vw;
+    bottom: -1.583vw;
+    left: -2.167vw;
+  }
+  .welcome_cont .event::after {
+    width: 7.833vw;
+    height: 6.167vw;
+    top: -2vw;
+    right: -2vw;
+  }
+  .welcome_cont .event a {
+    flex-direction: column;
+    gap: 2.083vw;
+    padding: 0 3.5vw;
+  }
+  .welcome_cont .event a::after {
+    width: 1.917vw;
+    height: 2.917vw;
+    position: relative;
+    bottom: 0;
+    right: 0;
+  }
+  .welcome_cont .event h5 {
+    font-size: 2.833vw;
+  }
+  .welcome_cont .event p {
+    font-size: 2.167vw;
+    line-height: 1.4;
+  }
+  /* [e] 2023-09-18 */
 }
 
 @media all and (max-width: 768px) {
@@ -10709,7 +10871,6 @@
     height: 16.927vw;
   }
 
-  /* [s] 2023-07-25 */
   .challenge_content .img_wrap p {
     font-size: 1.667vw;
   }
@@ -10721,7 +10882,10 @@
   #contents .exp_intro.challenge .challenge_global h4 {
     margin-bottom: 0;
   }
-  /* [e] 2023-07-25 */
+
+  .tit_p {
+    font-size: 16px;
+  } /* 2023-09-18 */
 }
 
 @media all and (max-width: 740px) {
