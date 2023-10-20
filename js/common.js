@@ -361,7 +361,9 @@ $(function () {
     ebooktab = ebookwrap.find(".tab_box > div"),
     ebooktabSub = ebooktab.find(".inner");
   // ebooklink = ebooktabSub.find('> li > a'),
-  (ebooklink = ebookwrap.find(".ebooklink")), (nolink = ebookwrap.find(".nolink")), (ebookBox = ebookwrap.find(".tab_con .ebook_tabbox"));
+  (ebooklink = ebookwrap.find(".ebooklink")),
+    (nolink = ebookwrap.find(".nolink")),
+    (ebookBox = ebookwrap.find(".tab_con .ebook_tabbox"));
 
   ebooktab.on({
     mouseenter: function (e) {
@@ -384,7 +386,9 @@ $(function () {
     ebooktab.addClass("off");
     thisTab.removeClass("off");
     ebooktabSub.hide();
-    ebookBox.find("iframe").attr("src", "https://book.allviaedu.com/view/index.html?contbase=/" + thisEbook + "/&title=abcd&viewtype=html5");
+    ebookBox
+      .find("iframe")
+      .attr("src", "https://book.allviaedu.com/view/index.html?contbase=/" + thisEbook + "/&title=abcd&viewtype=html5");
   });
 
   nolink.on("click", function (e) {
@@ -469,7 +473,8 @@ $(function () {
     e.preventDefault();
     var selectBro = $('.bro_radio input[type="radio"]:checked').attr("id");
     console.log(selectBro);
-    window.open("about:blank").location.href = "https://book.allviaedu.com/view/index.html?contbase=/" + selectBro + "/&title=abcd";
+    window.open("about:blank").location.href =
+      "https://book.allviaedu.com/view/index.html?contbase=/" + selectBro + "/&title=abcd";
   });
 
   //price anchor

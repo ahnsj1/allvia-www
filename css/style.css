@@ -6271,9 +6271,9 @@
 #free_trial_pop form .tit label {
   display: block;
 }
-#free_trial_pop form .tit span {
+#free_trial_pop form .tit span.required {
   color: #ff0000;
-}
+} /* 2023-10-20 */
 #free_trial_pop form .con {
   min-height: 35px;
   display: flex;

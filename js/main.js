@@ -103,4 +103,12 @@ $(function () {
     dots: true,
     arrows: false,
   });
+
+  // 2023-10-20 new floating
+  var mainFloating = $("#floating ul");
+  var floatingCtrl = $("#floating .ctrl");
+  mainFloating.slick({
+    infinite: false,
+    appendArrows: floatingCtrl,
+  });
 });

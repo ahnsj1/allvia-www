@@ -817,6 +817,69 @@
 }
 /* [e] 2023-09-27 */
 
+/* [s] 2023-10-20 */
+#floating {
+  position: absolute;
+  top: 166px;
+  right: 105px;
+  background-color: #fff;
+  border-radius: 25px;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  z-index: 10;
+  width: 193px;
+  height: 318px;
+}
+#floating .slick-slider {
+  height: calc(100% - 55px);
+}
+#floating .slick-list,
+#floating .slick-track {
+  height: 100%;
+}
+#floating li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 23px 10px;
+  text-align: center;
+}
+#floating li p {
+  font-size: 16px;
+  color: #363636;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+#floating .ctrl {
+  position: absolute;
+  inset: auto 0 0;
+  height: 55px;
+  background-color: rgba(88, 127, 213, 0.1);
+  font-size: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 17px;
+}
+#floating .slick-arrow {
+  width: 27px;
+  height: 21px;
+  background-size: 100% 100%;
+}
+#floating .slick-prev {
+  background-image: url(../images/ico/ico_prev_fb.png);
+}
+#floating .slick-prev.slick-disabled {
+  background-image: url(../images/ico/ico_prev_fb_d.png);
+}
+#floating .slick-next {
+  background-image: url(../images/ico/ico_next_fb.png);
+}
+#floating .slick-next.slick-disabled {
+  background-image: url(../images/ico/ico_next_fb_d.png);
+}
+/* [e] 2023-10-20 */
+
 /*****************************************************************************************************************************************************************************************/
 
 @media all and (max-width: 1450px) {
@@ -1056,9 +1119,9 @@
 }
 
 @media all and (max-width: 950px) {
-  #container {
+  /*#container {
     margin-top: 117px;
-  }
+  } 2023-10-20 삭제 */
 
   .floating_banner {
     width: 200px;
@@ -1409,12 +1472,57 @@
   .demo_ban > div.blog {
     background-image: url(../images/bg/bg_subbanner_blog_m.png);
   }
+
+  /* [s] 2023-10-20 */
+  #floating {
+    position: relative;
+    top: 0;
+    right: 0;
+    border-radius: 0;
+    box-shadow: none;
+    width: 100%;
+    height: auto;
+  }
+  #floating li {
+    padding: 0;
+    height: 14.42vw;
+    justify-content: center;
+  }
+  #floating li.li01 {
+    background-color: #f5e1fd;
+  }
+  #floating li.li01 img {
+    height: 6.5vw;
+  }
+  #floating li p {
+    font-size: 2.67vw;
+    margin-top: 0.83vw;
+  }
+  #floating .ctrl {
+    position: static;
+    height: 0;
+    background-color: transparent;
+  }
+  #floating .slick-arrow {
+    width: 4.5vw;
+    height: 3.42vw;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  #floating .slick-prev {
+    left: 3.75vw;
+  }
+  #floating .slick-next {
+    right: 3.75vw;
+  }
+  /* [e] 2023-10-20 */
 }
 
 @media all and (max-width: 768px) {
   #container {
-    margin-top: 92px;
-  }
+    margin-top: 66px;
+  } /* 2023-10-20 */
   .visual .txt_box {
     gap: 25px;
   } /* 2023-09-27 */
