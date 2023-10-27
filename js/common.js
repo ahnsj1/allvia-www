@@ -618,6 +618,37 @@ $(function () {
   }
   pop_once.forEach((pop) => showOnce(pop));
 
+  // 2023-10-27 floating
+  const floating = document.getElementById("floating");
+  const floatingList = floating.querySelector("ul");
+  const floatingBanner = floatingList.querySelectorAll("li");
+  const floatingPrev = floating.querySelector(".btn_prev");
+  const floatingNext = floating.querySelector(".btn_next");
+  const disabledClass = "disabled";
+  const movePercent = 100 / floatingBanner.length;
+  const endPercent = -movePercent * (floatingBanner.length - 1);
+  let currentMovePercent = 0;
+
+  floatingList.style.width = `${100 * floatingBanner.length}%`;
+  floatingPrev.classList.add(disabledClass);
+  if (floatingBanner.length === 1) floatingNext.classList.add(disabledClass);
+
+  floatingPrev.addEventListener("click", (e) => {
+    if (e.target.classList.contains(disabledClass)) return;
+    floatingList.style.transform = `translateX(${currentMovePercent + movePercent}%)`;
+    currentMovePercent += movePercent;
+    if (currentMovePercent === 0) e.target.classList.add(disabledClass);
+    if (currentMovePercent !== endPercent) floatingNext.classList.remove(disabledClass);
+  });
+
+  floatingNext.addEventListener("click", (e) => {
+    if (e.target.classList.contains(disabledClass)) return;
+    floatingList.style.transform = `translateX(${currentMovePercent - movePercent}%)`;
+    currentMovePercent -= movePercent;
+    if (currentMovePercent === endPercent) e.target.classList.add(disabledClass);
+    if (currentMovePercent !== 0) floatingPrev.classList.remove(disabledClass);
+  });
+
   // 2023-06-09 챗봇
   const chatbot = document.getElementById("custom_chat_button");
   const chatbot_close = chatbot.querySelector(".close");

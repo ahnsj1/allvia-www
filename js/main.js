@@ -104,11 +104,11 @@ $(function () {
     arrows: false,
   });
 
-  // 2023-10-20 new floating
-  var mainFloating = $("#floating ul");
-  var floatingCtrl = $("#floating .ctrl");
-  mainFloating.slick({
-    infinite: false,
-    appendArrows: floatingCtrl,
-  });
+  // 2023-10-27 삭제
+  // var mainFloating = $("#floating ul");
+  // var floatingCtrl = $("#floating .ctrl");
+  // mainFloating.slick({
+  //   infinite: false,
+  //   appendArrows: floatingCtrl,
+  // });
 });

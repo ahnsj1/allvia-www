@@ -51,7 +51,6 @@
   background: url(../images/ico/ico_pop_close_w.png) no-repeat 0 0;
 }
 
-/* [s] 2023-09-27 */
 .visual_slide {
   position: relative;
 }
@@ -79,12 +78,15 @@
   transform: translateX(-50%);
 }
 .visual {
-  height: 740px;
+  /* height: 740px; */
   background: url(../images/pic/pic_visual.jpg) no-repeat right bottom;
   cursor: pointer;
   position: relative;
   padding-top: 140px;
-}
+} /* 2023-10-27 */
+.slick-slide.visual {
+  height: 740px;
+} /* 2023-10-27 */
 .visual .txt_box {
   position: relative;
   padding-left: 120px;
@@ -134,19 +136,11 @@
 .visual.visual02 {
   background-image: url(../images/pic/pic_visual_2.png);
 }
-/* .visual.visual02 .txt_box em,
-.visual.visual03 .txt_box em,
-.visual.visual04 .txt_box em,
-.visual.visual05 .txt_box em {
-  font-size: 48px;
-  letter-spacing: -2px;
-} */
 .visual.visual02 .txt_box .brand,
 .visual.visual03 .txt_box .brand {
   display: flex;
   align-items: flex-end;
   font-size: 40px;
-  /* margin-top: 35px; */
 }
 .visual.visual02 .txt_box .brand img,
 .visual.visual03 .txt_box .brand img {
@@ -170,14 +164,6 @@
   background-image: url(../images/pic/pic_visual_4.png);
   background-position: center bottom;
 }
-/* .visual.visual04 .txt_box {
-  padding-top: 120px;
-  z-index: 1;
-} 
-.visual.visual04 .brand {
-  margin-top: 45px;
-  padding-bottom: 10px;
-}  */
 .visual.visual04 .gif_wrap {
   position: absolute;
   top: 58%;
@@ -199,14 +185,6 @@
   background-image: url(../images/pic/pic_visual_5.png);
   background-position: right bottom;
 }
-/* .visual.visual05 .txt_box {
-  padding-top: 120px;
-} 
-.visual.visual05 .brand {
-  margin-top: 45px;
-  padding-bottom: 10px;
-} */
-/* [e] 2023-09-27 */
 
 .solution_video {
   position: relative;
@@ -725,7 +703,6 @@
   transform: translateX(-50%);
 }
 
-/* [s] 2023-09-27 */
 .membership {
   background: #fff;
   padding: 28px 0;
@@ -740,7 +717,9 @@
   padding: 30px 40px;
   text-align: center;
   color: #fff;
-}
+  display: flex;
+  flex-direction: column;
+} /* 2023-10-27 */
 .membership h3 {
   font-size: 28px;
   font-weight: 500;
@@ -769,7 +748,8 @@
   padding: 10px 0;
   font-weight: 300;
   line-height: 1.4;
-}
+  flex: 1;
+} /* 2023-10-27 */
 .membership .btn {
   display: flex;
   justify-content: center;
@@ -815,9 +795,8 @@
 .membership > div:nth-child(3) .btn a:last-child {
   color: #32aed2;
 }
-/* [e] 2023-09-27 */
 
-/* [s] 2023-10-20 */
+/* 2023-10-27 삭제(style02로 이동, 수정)
 #floating {
   position: absolute;
   top: 166px;
@@ -843,6 +822,7 @@
   align-items: center;
   padding: 23px 10px;
   text-align: center;
+  cursor: pointer;
 }
 #floating li p {
   font-size: 16px;
@@ -877,8 +857,7 @@
 }
 #floating .slick-next.slick-disabled {
   background-image: url(../images/ico/ico_next_fb_d.png);
-}
-/* [e] 2023-10-20 */
+} */
 
 /*****************************************************************************************************************************************************************************************/
 
@@ -887,7 +866,6 @@
     right: 30px;
   }
 
-  /* [s] 2023-09-27 */
   .membership {
     padding-left: 20px;
     padding-right: 20px;
@@ -898,7 +876,6 @@
     padding-left: 25px;
     padding-right: 25px;
   }
-  /* [e] 2023-09-27 */
 }
 
 @media all and (max-width: 1320px) {
@@ -1011,52 +988,13 @@
     margin-top: 90px;
   }
 
-  /* [s] 2023-09-27 */
   .visual {
-    height: 600px;
+    /* height: 600px; */
     padding-top: 0;
-  }
-  /* .visual {
-    height: 925px;
-  }
-  .visual.visual01 {
-    background-position: right -300px top;
-    background-size: 1200px;
-  }
-  .visual.visual02 {
-    background-size: auto 925px;
-  }
-  .visual.visual03 {
-    background-size: auto 925px;
-    background-position: 82% center;
-  }
-  .visual .txt_box {
-    padding-left: 85px;
-  }
-  .visual .txt_box em,
-  .visual.visual02 .txt_box em,
-  .visual.visual03 .txt_box em,
-  .visual.visual04 .txt_box em,
-  .visual.visual05 .txt_box em {
-    font-size: 40px;
-  }
-  .visual .txt_box .brand {
-    font-size: 70px;
-  }
-  .visual .txt_box p {
-    font-size: 23px;
-  }
-  .visual.visual02 .txt_box .brand img,
-  .visual.visual03 .txt_box .brand img {
-    width: 220px;
-  }
-  .visual.visual04 .txt_box .brand img {
-    height: 93px;
-  }
-  .visual.visual04 .gif_wrap {
-    width: 672px;
-    height: 290px;
-  }
+  } /* 2023-10-27 */
+  .slick-slide.visual {
+    height: 600px;
+  } /* 2023-10-27 */
   .visual.visual05 .txt_box .brand img {
     height: 90px;
   }
@@ -1069,15 +1007,13 @@
   }
   .visual_slide .slick-next {
     right: 17px;
-  } */
-  /* [e] 2023-09-27 */
+  }
 
   .demo_ban > div {
     height: 336px;
     padding-top: 70px;
   }
 
-  /* [s] 2023-09-27 */
   .membership {
     padding: 2.917vw 3.75vw;
     justify-content: space-between;
@@ -1115,14 +1051,9 @@
     border-radius: 2.833vw;
     font-size: 2.167vw;
   }
-  /* [e] 2023-09-27 */
 }
 
 @media all and (max-width: 950px) {
-  /*#container {
-    margin-top: 117px;
-  } 2023-10-20 삭제 */
-
   .floating_banner {
     width: 200px;
     height: 200px;
@@ -1155,9 +1086,12 @@
 
   .visual {
     position: relative;
-    height: auto;
+    /* height: auto; */
     background: transparent;
-  }
+  } /* 2023-10-27 */
+  .slick-slide.visual {
+    height: auto;
+  } /* 2023-10-27 */
   .visual .txt_box {
     position: absolute;
     inset: 0;
@@ -1167,13 +1101,13 @@
     justify-content: flex-start;
     align-items: center;
     gap: 40px;
-  } /* 2023-09-27 */
+  }
   .visual .mb_bg {
     display: block;
   }
   .visual.visual01 .txt_box .brand {
     font-size: 70px;
-  } /* 2023-09-27 */
+  }
   .visual.visual02 .txt_box .brand {
     flex-direction: column;
     align-items: center;
@@ -1213,9 +1147,6 @@
   .visual.visual05 .txt_box {
     padding-top: 90px;
   }
-  /* .visual.visual05 .txt_box p {
-    margin-bottom: 40px;
-  } 2023-09-27 삭제 */
   .visual.visual05 .txt_box .brand img {
     height: 140px;
     margin: 0 auto;
@@ -1473,8 +1404,8 @@
     background-image: url(../images/bg/bg_subbanner_blog_m.png);
   }
 
-  /* [s] 2023-10-20 */
-  #floating {
+  /* 2023-10-27 삭제(style02로 이동, 수정)
+   #floating {
     position: relative;
     top: 0;
     right: 0;
@@ -1515,17 +1446,16 @@
   }
   #floating .slick-next {
     right: 3.75vw;
-  }
-  /* [e] 2023-10-20 */
+  } */
 }
 
 @media all and (max-width: 768px) {
   #container {
     margin-top: 66px;
-  } /* 2023-10-20 */
+  }
   .visual .txt_box {
     gap: 25px;
-  } /* 2023-09-27 */
+  }
   .visual .txt_box em,
   .visual.visual02 .txt_box em,
   .visual.visual03 .txt_box em,
@@ -1544,7 +1474,7 @@
   }
   .visual.visual03 .txt_box .brand {
     font-size: 25px;
-  } /* 2023-09-27 */
+  }
   .visual.visual03 .txt_box .brand img {
     width: 170px;
   }
@@ -1554,26 +1484,18 @@
   .visual.visual04 .txt_box {
     padding-top: 60px;
   }
-  /* .visual.visual04 .brand {
-    margin-top: 30px;
-    padding-bottom: 0;
-  } 2023-09-27 삭제 */
   .visual.visual04 .txt_box .brand img {
     height: 97px;
   }
   .visual.visual05 .txt_box {
     padding-top: 60px;
   }
-  /*.visual.visual05 .brand {
-    margin-top: 30px;
-    padding-bottom: 0;
-  } 2023-09-27 삭제 */
   .visual.visual05 .txt_box .brand img {
     height: 104px;
   }
   .visual .txt_box .more {
     margin-top: 20px;
-  } /* 2023-09-27 */
+  }
 
   .solution_video a strong {
     font-size: 18px;
@@ -1655,7 +1577,7 @@
 @media all and (max-width: 640px) {
   .visual .txt_box {
     gap: 15px;
-  } /* 2023-09-27 */
+  }
   .visual .txt_box em {
     font-size: 16px;
   }
@@ -1668,7 +1590,7 @@
   }
   .visual.visual01 .txt_box .brand {
     font-size: 40px;
-  } /* 2023-09-27 (.visual01 클래스 추가)*/
+  }
   .visual .txt_box a {
     margin-top: 20px;
     padding: 10px 20px;
@@ -1677,13 +1599,13 @@
   .visual .txt_box p {
     width: 80%;
     font-size: 14px;
-  } /* 2023-09-27 */
+  }
   .visual .txt_box p br {
     display: none;
   }
   .visual.visual02 .txt_box .brand {
     font-size: 20px;
-  } /* 2023-09-27 */
+  }
   .visual.visual02 .txt_box .brand img {
     margin-bottom: 10px;
     width: 160px;
@@ -1693,7 +1615,7 @@
   }
   .visual.visual03 .txt_box .brand {
     font-size: 14px;
-  } /* 2023-09-27 */
+  }
   .visual.visual03 .txt_box .brand img {
     width: 100px;
     margin-right: 5px;
@@ -1701,21 +1623,12 @@
   .visual.visual03 .txt_box .brand b {
     font-size: 16px;
   }
-  /* .visual.visual04 .brand {
-    margin-top: 15px;
-  } 2023-09-27 삭제 */
   .visual.visual04 .txt_box .brand img {
     height: 50px;
   }
-  /* .visual.visual05 .brand {
-    margin-top: 15px;
-  } 2023-09-27 삭제 */
   .visual.visual05 .txt_box .brand img {
     height: 53px;
   }
-  /* .visual.visual05 .txt_box p {
-    margin-bottom: 0;
-  } 2023-09-27 삭제 */
   .visual_slide .slick-arrow {
     width: 40px;
     height: 71px;
@@ -1740,7 +1653,7 @@
     margin-top: 10px;
     width: 70px;
     line-height: 34px;
-  } /* 2023-09-27 */
+  }
 
   .solution_video a strong {
     padding-bottom: 70px;
