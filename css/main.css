@@ -774,27 +774,27 @@
 .membership > div:nth-child(1) .btn a:first-child {
   background: #e84546;
 }
-.membership > div:nth-child(1) .btn a:last-child {
+/* .membership > div:nth-child(1) .btn a:last-child {
   color: #f98787;
-}
+} 2023-10-30 삭제 */
 .membership > div:nth-child(2) {
   background: #8c75c7;
 }
 .membership > div:nth-child(2) .btn a:first-child {
   background: #523794;
 }
-.membership > div:nth-child(2) .btn a:last-child {
+/* .membership > div:nth-child(2) .btn a:last-child {
   color: #8c75c7;
-}
+} 2023-10-30 삭제 */
 .membership > div:nth-child(3) {
   background: #32aed2;
 }
 .membership > div:nth-child(3) .btn a:first-child {
   background: #016e8d;
 }
-.membership > div:nth-child(3) .btn a:last-child {
+/* .membership > div:nth-child(3) .btn a:last-child {
   color: #32aed2;
-}
+} 2023-10-30 삭제 */
 
 /* 2023-10-27 삭제(style02로 이동, 수정)
 #floating {
@@ -985,8 +985,8 @@
 
 @media all and (max-width: 1200px) {
   #container {
-    margin-top: 90px;
-  }
+    margin-top: 117px;
+  } /* 2023-10-30 */
 
   .visual {
     /* height: 600px; */
@@ -1084,6 +1084,10 @@
     background-size: 20px;
   }
 
+  .visual_slide {
+    transform: translateY(14.4vw);
+    margin-bottom: 14.4vw;
+  } /* 2023-10-30 */
   .visual {
     position: relative;
     /* height: auto; */

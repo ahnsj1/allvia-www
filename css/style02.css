@@ -2683,9 +2683,9 @@
   height: 318px;
   z-index: 9999;
 }
-.sub #floating {
+/* .sub #floating {
   top: -44px;
-}
+} 2023-10-30 삭제 */
 #floating .banner {
   height: calc(100% - 55px);
   overflow: hidden;
@@ -3858,18 +3858,17 @@
 
   /* [s] 2023-10-27 */
   #floating {
-    position: relative;
-    top: 0;
+    top: 100%;
     right: 0;
     border-radius: 0;
     box-shadow: none;
     width: 100%;
     height: auto;
-  }
-  .sub #floating {
+  } /* 2023-10-30 */
+  /* .sub #floating {
     top: 0;
     margin-bottom: -30px;
-  }
+  } 2023-10-30 삭제 */
   #floating .banner {
     height: 14.42vw;
   }

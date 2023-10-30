@@ -6134,6 +6134,7 @@
   background: #fff;
   display: flex;
   align-items: center;
+  justify-content: center; /* 2023-10-30 */
   text-align: center;
   font-size: 16px;
   position: relative;
@@ -10409,8 +10410,9 @@
   }
   .welcome_cont > div.half {
     background: transparent;
-    padding-right: 0;
-  }
+    padding-right: 1.5vw;
+    padding-left: 1.5vw;
+  } /* 2023-10-30 */
   .welcome_cont > div.half::before {
     content: "";
     position: absolute;
@@ -10424,8 +10426,8 @@
     border: 0.167vw solid #e0e0e3;
   }
   .welcome_cont > div.half.conversion > img {
-    top: 2.5vw;
-  }
+    top: 3.5vw;
+  } /* 2023-10-30 */
   .welcome_cont > div.half.blog > img {
     top: 0.833vw;
   }
@@ -11568,6 +11570,12 @@
     height: 30px;
     font-size: 11px;
   }
+  .form_page_wrap .form_wrap ul li input[type="text"]::placeholder,
+  .form_page_wrap .form_wrap ul li input[type="email"]::placeholder,
+  .form_page_wrap .form_wrap ul li input[type="tel"]::placeholder,
+  .form_page_wrap .form_wrap ul li input[type="password"]::placeholder {
+    font-size: 11px;
+  } /* 2023-10-30 */
   .form_page_wrap .form_wrap .lay03 .con .selectric-wrapper {
     height: 30px;
     overflow: hidden;

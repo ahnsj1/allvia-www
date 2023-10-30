@@ -94,15 +94,18 @@ $(function () {
   var menuBtn = $("header nav h2"),
     mobileMenu = $(".mobile_menu"),
     menuClose = $(".menu_close"),
-    mbMenuList = $(".mobile_menu .menu > li");
+    mbMenuList = $(".mobile_menu .menu > li"),
+    floatingBnr = $("#floating"); // 2023-10-30
 
   menuBtn.on("click", function () {
     mobileMenu.show();
     scrollFixed();
+    floatingBnr.hide(); // 2023-10-30
   });
 
   menuClose.on("click", function () {
     mobileMenu.hide();
+    floatingBnr.show(); // 2023-10-30
     var topCnt = $("body").find("#wrap").css("top"),
       topCnt = topCnt.replace("-", ""),
       topCnt = topCnt.replace("px", "");
