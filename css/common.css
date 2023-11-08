@@ -1498,6 +1498,9 @@ body.fix #wrap {
   content: "LEARN MORE";
   font-size: 15px;
 }
+.price_wrap .price_list .slick-slide .btn_wrap {
+  margin-top: 0;
+} /* 2023-11-08 */
 .price_wrap .price_list .slick-slide .btn_wrap a {
   display: block;
   height: 83px;
@@ -1510,6 +1513,7 @@ body.fix #wrap {
   background-image: url(../images/ico/ico_price_plus.png);
   background-repeat: no-repeat;
   background-position: right 31px top 21px;
+  margin: 0; /* 2023-11-08 */
 }
 
 .price_wrap .price_list .slick-slide.feat02 .top {

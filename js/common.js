@@ -95,7 +95,8 @@ $(function () {
     mobileMenu = $(".mobile_menu"),
     menuClose = $(".menu_close"),
     mbMenuList = $(".mobile_menu .menu > li"),
-    floatingBnr = $("#floating"); // 2023-10-30
+    floatingBnr = $("#floating"), // 2023-10-30
+    floatingClose = $("#floating .close"); // 2023-11-08
 
   menuBtn.on("click", function () {
     mobileMenu.show();
@@ -123,6 +124,11 @@ $(function () {
       mbMenuList.removeClass("on").eq(i).addClass("on");
       mSubMenu.stop().slideUp().eq(i).stop().slideDown();
     }
+  });
+
+  // 2023-11-08
+  floatingClose.on("click", function () {
+    floatingBnr.hide();
   });
 
   //팝업
