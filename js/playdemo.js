@@ -19,15 +19,14 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // 2023-05-08 현재 스텝 찾기 함수로 뺌
-  const findCurrentStep = () =>
-    Array.from(demoStep).find((step) => step.style.display === "block");
+  const findCurrentStep = () => Array.from(demoStep).find((step) => step.style.display === "block");
 
   // 2023-05-08 이전 경로에 따라 버튼 활성화
-  const activeProgramBtn = Array.from(
-    findCurrentStep().querySelectorAll(".pr_btn")
-  )?.find((program) => program.hasAttribute("onActive"));
+  const activeProgramBtn = Array.from(findCurrentStep().querySelectorAll(".pr_btn"))?.find((program) =>
+    program.hasAttribute("onActive")
+  );
 
-  // [LOCAL TEST] if (/play\d+/g.test(document.referrer)) {
+  // [LOCAL TEST] if (/play_/g.test(document.referrer)) {
   if (/demo\/\w+/g.test(document.referrer)) {
     // 서브 경로
     activeProgramBtn.classList.add("on");
@@ -52,17 +51,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const currentStep = findCurrentStep(); // 2023-05-08
     const activeView = currentStep.getAttribute("activeView");
-    const choices = [...currentStep.children].find((el) =>
-      el.classList.contains("choices")
-    );
+    const choices = [...currentStep.children].find((el) => el.classList.contains("choices"));
     let activeChoice, activeIndex;
     if (choices) {
-      activeChoice = Array.from(currentStep.querySelectorAll("input")).find(
-        (radio) => radio.checked
-      ).parentElement;
-      activeIndex = Array.from(currentStep.querySelectorAll(".item")).indexOf(
-        activeChoice
-      );
+      activeChoice = Array.from(currentStep.querySelectorAll("input")).find((radio) => radio.checked).parentElement;
+      activeIndex = Array.from(currentStep.querySelectorAll(".item")).indexOf(activeChoice);
     }
 
     if (activeView !== null) {
@@ -86,10 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // check & last_step or last choice => done
         if (isChecked) {
-          if (
-            currentStep === lastStep ||
-            choice.getAttribute("last-choice") !== null
-          ) {
+          if (currentStep === lastStep || choice.getAttribute("last-choice") !== null) {
             hide(stepBtnNext);
             show(stepBtnDone);
           } else {
@@ -108,11 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
     popBackBtn.forEach((btn, idx) => {
       btn.addEventListener("click", (e) => {
         let popContainer = e.target;
-        for (
-          ;
-          !popContainer.classList.contains("demo_pop");
-          popContainer = popContainer.parentElement
-        );
+        for (; !popContainer.classList.contains("demo_pop"); popContainer = popContainer.parentElement);
         hide(popContainer);
 
         const teacherIframe = document.querySelector("#teacher_m iframe");
@@ -139,9 +125,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const howPop = document.querySelectorAll(".demo_pop.howit");
 
   function openHowPop(howNum, program) {
-    const thisHowPop = Array.from(howPop).find((pop) =>
-      pop.classList.contains(program)
-    );
+    const thisHowPop = Array.from(howPop).find((pop) => pop.classList.contains(program));
     const thisHowThumb = thisHowPop.querySelectorAll(".thumb");
 
     show(thisHowPop);
@@ -168,9 +152,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const activityTitle = activityPop.querySelector(".ac_tit");
   const titles = activityTitle.querySelectorAll(".title");
   const subTitle = activityPop.querySelectorAll(".sub_tit");
-  const haveSub = [...titles].filter(
-    (tit) => tit.getAttribute("haveSub") !== null
-  );
+  const haveSub = [...titles].filter((tit) => tit.getAttribute("haveSub") !== null);
   const activityContent = activityPop.querySelector(".ac_con");
   const activityVideo = activityPop.querySelectorAll(".thumb");
   const infoBtn = document.querySelector(".btn_info");
@@ -217,9 +199,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (titles) {
     titles.forEach((tit, tidx) => {
-      const siblings = [...tit.parentElement.children].filter(
-        (el) => el !== tit
-      );
+      const siblings = [...tit.parentElement.children].filter((el) => el !== tit);
 
       tit.addEventListener("click", () => {
         tit.classList.add("on");
@@ -267,8 +247,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
       if (infoBtn) hide(infoBtn);
     } else {
-      if (activityVideo)
-        activityVideo.forEach((video) => (video.style.display = "none"));
+      if (activityVideo) activityVideo.forEach((video) => (video.style.display = "none"));
       if (activityContent) show(activityContent);
 
       if (teacherView) adjustSizeView(teacherView);
@@ -282,13 +261,9 @@ document.addEventListener("DOMContentLoaded", () => {
       const subItems = sub.querySelectorAll("li");
 
       subItems.forEach((item, idx) => {
-        const siblings = [...item.parentElement.children].filter(
-          (el) => el !== item
-        );
+        const siblings = [...item.parentElement.children].filter((el) => el !== item);
         item.addEventListener("click", () => {
-          const activeVideo = [...activityVideo].find(
-            (video) => video.style.display === "block"
-          );
+          const activeVideo = [...activityVideo].find((video) => video.style.display === "block");
           item.classList.add("on");
           siblings.forEach((s) => s.classList.remove("on"));
           if (activeVideo) {
@@ -305,17 +280,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Other Popup (Pre-class...)
   function openChoicePop(choice, value) {
-    const choicePop = [...document.querySelectorAll(".demo_pop")].find((pop) =>
-      pop.classList.contains(value)
-    );
+    const choicePop = [...document.querySelectorAll(".demo_pop")].find((pop) => pop.classList.contains(value));
     const choiceIndex = [...choices]
-      .filter(
-        (v) =>
-          v.getAttribute("last-choice") === choice.getAttribute("last-choice")
-      )
+      .filter((v) => v.getAttribute("last-choice") === choice.getAttribute("last-choice"))
       .indexOf(choice);
-    const choiceTitle = choicePop.querySelectorAll(".title");
+    // 2023-11-07 .class_tit 클래스 추가
+    const choiceTitle = choicePop.querySelectorAll(".class_tit .title");
     const choiceVideo = choicePop.querySelectorAll("iframe");
+    // 2023-11-07
+    const choiceContent = choicePop.querySelectorAll(".ch-cont");
 
     function activeChoiceIndex(nodes) {
       nodes.forEach((node, i) => {
@@ -326,6 +299,17 @@ document.addEventListener("DOMContentLoaded", () => {
     show(choicePop);
     activeChoiceIndex(choiceTitle);
     activeChoiceIndex(choiceVideo);
+
+    // 2023-11-07
+    if (choiceContent) {
+      choiceContent.forEach((cont) => {
+        if (cont.classList.contains(`con${choiceIndex + 1}`)) {
+          show(cont);
+        } else {
+          hide(cont);
+        }
+      });
+    }
   }
 
   // screen rotate
@@ -334,9 +318,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const currentStep = findCurrentStep(); // 2023-05-08
       let activeChoice, activeFunc;
       if (!currentStep.querySelector(".program")) {
-        activeChoice = Array.from(currentStep.querySelectorAll("input")).find(
-          (radio) => radio.checked
-        ).parentElement;
+        activeChoice = Array.from(currentStep.querySelectorAll("input")).find((radio) => radio.checked).parentElement;
         activeFunc = activeChoice.getAttribute("activeFunc");
       }
 

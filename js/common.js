@@ -299,25 +299,35 @@ $(function () {
     acTabCon = acTabWrap.find(".ac_tabcon > div"),
     acClass = $(".ac_class"),
     acClassWrap = $(".activity_guidewrap"),
-    acClassCon = acClassWrap.find(".class_guide");
+    acClassCon = acClassWrap.find(".class_guide"),
+    // 2023-11-07
+    choiceBtn = $(".playdm_wrap .choice_item"),
+    hiddenStep = $(".step_cnt.hidden");
 
   acClassWrap.hide();
 
+  // 2023-11-07 수정
   acClass.on("click", function () {
-    acClassWrap.show();
-    var i = $(this).index();
-    if (i === 1) {
+    // acClassWrap.show();
+    // var i = $(this).index();
+    // if (i === 1) {
+    //   acClassWrap.hide();
+    // } else {
+    //   acTabWrap.hide();
+    //   acClassWrap.show();
+    //   acClassCon.hide();
+    //   if (i === 0) acClassCon.eq(0).show();
+    //   else if (i === 2) acClassCon.eq(1).show();
+    // }
+    acTabWrap.hide();
+    if ($(this).attr("stepview") !== undefined) {
       acClassWrap.hide();
-      // acTabWrap.show();
     } else {
-      acTabWrap.hide();
+      const classViewNum = $(this).attr("classview") - 1;
       acClassWrap.show();
-      acClassCon.hide();
-      if (i === 0) acClassCon.eq(0).show();
-      else if (i === 2) acClassCon.eq(1).show();
+      acClassCon.hide().eq(classViewNum).show();
     }
   });
-  // acClass.eq(0).trigger('click');
 
   acTabWrap.hide();
 
@@ -326,16 +336,37 @@ $(function () {
     acTabTxt.eq(0).show();
   }
 
+  // 2023-11-07 수정
   acTabBtn.on("click", function () {
     acTabWrap.show();
-    var i = $(this).index();
-    acTabTxt.hide().eq(i).show();
-    acTabCon.hide().eq(i).show();
+    // var i = $(this).index();
+    // acTabTxt.hide().eq(i).show();
+    // acTabCon.hide().eq(i).show();
+    const textViewIdx = $(this).attr("txtview") - 1;
+    const actViewIdx = $(this).attr("actview") - 1;
 
-    const thisMaList = acTabCon.eq(i).find(".ma_list");
-    if (thisMaList.length > 0) {
-      thisMaList.find("li:first-of-type").trigger("click");
+    if (textViewIdx >= 0) {
+      acTabTxt.hide().eq(textViewIdx).show();
+    } else {
+      acTabTxt.hide();
     }
+    if (actViewIdx >= 0) {
+      acTabCon.hide().eq(actViewIdx).show();
+      const thisMaList = acTabCon.eq(actViewIdx).find(".ma_list");
+      if (thisMaList.length > 0) {
+        thisMaList.find("li:first-of-type").trigger("click");
+      }
+    } else {
+      acTabCon.hide();
+    }
+    if ($(this).attr("stepview") !== undefined) {
+      acTabWrap.hide();
+    }
+
+    // const thisMaList = acTabCon.eq(i).find(".ma_list");
+    // if (thisMaList.length > 0) {
+    //   thisMaList.find("li:first-of-type").trigger("click");
+    // }
 
     if ($(this).hasClass("lesson_m_view")) {
       acTabWrap.find(".wrapper").addClass("m_view");
@@ -357,6 +388,15 @@ $(function () {
         else video.children().eq(i).hide();
       }
     }
+  });
+
+  // 2023-11-07
+  choiceBtn.on("click", function () {
+    if (hiddenStep === undefined) return;
+    if ($(this).parents(".step_cnt").hasClass("hidden")) return;
+    const stepViewId = $(this).attr("stepview");
+    if (stepViewId === undefined || stepViewId === "") hiddenStep.hide();
+    else $(stepViewId).show();
   });
 
   //이북 탭

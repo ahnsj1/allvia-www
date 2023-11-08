@@ -902,6 +902,9 @@
   text-align: left;
   margin-top: 70px;
 }
+.playdm_wrap .step_cnt.hidden {
+  display: none;
+} /* 2023-11-07 */
 .playdm_wrap .step_cnt + .step_cnt {
   margin-top: 60px;
 }
@@ -980,6 +983,16 @@
   background: url(../images/bg/bg_playbtn_ma_on.png) no-repeat;
   background-size: 100% 100%;
 }
+/* [s] 2023-11-07 */
+.playdm_wrap .play_brand.challenge {
+  background: url(../images/bg/bg_playbtn_challenge.png) no-repeat;
+  background-size: 100% 100%;
+}
+.playdm_wrap .play_brand.challenge.on {
+  background: url(../images/bg/bg_playbtn_challenge_on.png) no-repeat;
+  background-size: 100% 100%;
+}
+/* [e] 2023-11-07 */
 .playdm_wrap .play_brand + .play_brand {
   margin-left: 8px;
 }
@@ -1263,6 +1276,74 @@
   width: 100%;
   height: 100%;
 }
+/* [s] 2023-11-07 */
+.activity_tabwrap .ac_videolist.one li .video_con > div {
+  top: 9.2%;
+  left: 2.6%;
+  width: 858px;
+  padding-top: 53.3%;
+}
+.activity_tabwrap .ac_tabcon .video {
+  padding: 45px 0 80px;
+}
+.activity_tabwrap .ac_tabcon .video > div {
+  position: relative;
+  width: 830px;
+  padding-top: 39.2%;
+  margin: 0 auto;
+}
+.activity_tabwrap .btm_cont h5 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 45px;
+}
+.activity_tabwrap .btm_cont .app {
+  display: flex;
+  justify-content: center;
+  gap: 45px;
+  margin-bottom: 70px;
+}
+.activity_tabwrap .btm_cont .app > a {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.activity_tabwrap .btm_cont .app > a > img:first-child {
+  height: 63px;
+}
+.activity_tabwrap .btm_cont .app > a > img:last-child {
+  height: 103px;
+}
+.activity_tabwrap .btm_cont .sample {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  padding-bottom: 80px;
+}
+.activity_tabwrap .btm_cont .sample a {
+  width: 240px;
+  height: 43px;
+  background: #001a72;
+  border-radius: 21px;
+  font-size: 22px;
+  font-weight: 500;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.activity_tabwrap .btm_cont .sample a span::after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 22px;
+  height: 22px;
+  background: url(../images/ico/ico_download2.png);
+  background-size: 100% 100%;
+  margin-left: 10px;
+}
+/* [e] 2023-11-07 */
 
 .activity_tabwrap .ma {
   padding-top: 40px;
@@ -1518,6 +1599,10 @@
   background-image: url(../images/ico/ico_mathalive_logo.png);
   background-size: 15.333vw auto;
 }
+.playdm_wrap .mobile_wrap .step_wrap .step .pr_btn.challenge {
+  background-image: url(../images/ico/ico_challenge_logo.png);
+  background-size: 18.75vw auto;
+} /* 2023-11-07 */
 .playdm_wrap .mobile_wrap .step_wrap .step .btn_how {
   font-size: 2.83vw;
   color: #001e71;
@@ -1730,6 +1815,47 @@
   font-size: 3vw;
   color: #fff;
 }
+/* [s] 2023-11-07 */
+.playdm_wrap .mobile_wrap .demo_pop .downloads .title {
+  margin-top: 9.167vw;
+  margin-bottom: 4.167vw;
+}
+.playdm_wrap .mobile_wrap .demo_pop .downloads .app {
+  display: flex;
+  justify-content: center;
+  gap: 4.583vw;
+}
+.playdm_wrap .mobile_wrap .demo_pop .downloads .app img {
+  height: 8.333vw;
+}
+.playdm_wrap .mobile_wrap .demo_pop .downloads .sample {
+  display: flex;
+  justify-content: center;
+  gap: 1.5vw;
+}
+.playdm_wrap .mobile_wrap .demo_pop .downloads .sample a {
+  width: 25.25vw;
+  height: 6.25vw;
+  background: #001e71;
+  border-radius: 3.083vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5vw;
+  font-weight: 500;
+  color: #fff;
+}
+.playdm_wrap .mobile_wrap .demo_pop .downloads .sample a span::after {
+  content: "";
+  display: inline-block;
+  vertical-align: bottom;
+  width: 3.333vw;
+  height: 3.333vw;
+  background: url(../images/ico/ico_download2.png);
+  background-size: 100% 100%;
+  margin-left: 1.5vw;
+}
+/* [e] 2023-11-07 */
 .playdm_wrap .mobile_wrap .demo_pop .ac_videolist li {
   position: relative;
 }
@@ -1759,6 +1885,14 @@
   width: 91%;
   height: 84%;
 }
+.playdm_wrap .mobile_wrap .demo_pop .ac_videolist.one .video_con > img {
+  height: 61.5vw;
+} /* 2023-11-07 */
+.playdm_wrap .mobile_wrap .demo_pop .ac_videolist.one .video_con > div {
+  top: 9.5%;
+  left: 3%;
+  width: 94.3%;
+} /* 2023-11-07 */
 .playdm_wrap .mobile_wrap .demo_pop .ac_con {
   position: relative;
 }
@@ -4655,6 +4789,9 @@
     display: flex;
     gap: 1.154vw;
   }
+  .playdm_wrap .mobile_wrap .demo_pop .ac_videolist.one {
+    justify-content: center;
+  } /* 2023-11-07 */
   .playdm_wrap .mobile_wrap .demo_pop .ac_videolist::after {
     display: none;
   }
