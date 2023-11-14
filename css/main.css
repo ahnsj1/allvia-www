@@ -78,15 +78,14 @@
   transform: translateX(-50%);
 }
 .visual {
-  /* height: 740px; */
   background: url(../images/pic/pic_visual.jpg) no-repeat right bottom;
   cursor: pointer;
   position: relative;
   padding-top: 140px;
-} /* 2023-10-27 */
+}
 .slick-slide.visual {
   height: 740px;
-} /* 2023-10-27 */
+}
 .visual .txt_box {
   position: relative;
   padding-left: 120px;
@@ -398,7 +397,7 @@
 .main_slide ul.slide_left li .txt {
   padding-top: 30px;
 }
-/* [s] 2023-10-30 클래스 변경 */
+
 .try-main {
   font-size: 24px;
   margin-top: 25px;
@@ -427,7 +426,6 @@
   transform: translateY(-50%);
   margin-left: 6px;
 }
-/* [e] 2023-10-30 클래스 변경 */
 
 .main_slide .slick-arrow {
   position: absolute;
@@ -721,7 +719,7 @@
   color: #fff;
   display: flex;
   flex-direction: column;
-} /* 2023-10-27 */
+}
 .membership h3 {
   font-size: 28px;
   font-weight: 500;
@@ -751,7 +749,7 @@
   font-weight: 300;
   line-height: 1.4;
   flex: 1;
-} /* 2023-10-27 */
+}
 .membership .btn {
   display: flex;
   justify-content: center;
@@ -763,7 +761,7 @@
   border-radius: 20px;
   font-size: 14px;
   color: #fff;
-  cursor: pointer; /* 2023-10-30 */
+  cursor: pointer;
 }
 .membership .btn a:first-child {
   color: #fff;
@@ -777,90 +775,72 @@
 .membership > div:nth-child(1) .btn a:first-child {
   background: #e84546;
 }
-/* .membership > div:nth-child(1) .btn a:last-child {
-  color: #f98787;
-} 2023-10-30 삭제 */
 .membership > div:nth-child(2) {
   background: #8c75c7;
 }
 .membership > div:nth-child(2) .btn a:first-child {
   background: #523794;
 }
-/* .membership > div:nth-child(2) .btn a:last-child {
-  color: #8c75c7;
-} 2023-10-30 삭제 */
 .membership > div:nth-child(3) {
   background: #32aed2;
 }
 .membership > div:nth-child(3) .btn a:first-child {
   background: #016e8d;
 }
-/* .membership > div:nth-child(3) .btn a:last-child {
-  color: #32aed2;
-} 2023-10-30 삭제 */
 
-/* 2023-10-27 삭제(style02로 이동, 수정)
-#floating {
+/* [s] 2023-11-14 */
+.pop_once {
+  width: 587px;
+  height: 365px;
+  background: url(../images/bg/bg_pop_open.png);
   position: absolute;
-  top: 166px;
-  right: 105px;
-  background-color: #fff;
-  border-radius: 25px;
-  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.08);
-  overflow: hidden;
-  z-index: 10;
-  width: 193px;
-  height: 318px;
+  top: 340px;
+  right: 310px;
+  z-index: 99;
+  padding-top: 60px;
+  font-family: "gotham-round";
+  display: none;
 }
-#floating .slick-slider {
-  height: calc(100% - 55px);
+.pop_once.on {
+  display: block;
 }
-#floating .slick-list,
-#floating .slick-track {
+.pop_once > a {
+  display: block;
   height: 100%;
-}
-#floating li {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 23px 10px;
   text-align: center;
-  cursor: pointer;
 }
-#floating li p {
-  font-size: 16px;
-  color: #363636;
-  margin-top: 10px;
-  line-height: 1.5;
+.pop_once p {
+  font-size: 20px;
+  color: #1a2240;
 }
-#floating .ctrl {
+.pop_once h4 {
+  font-size: 40px;
+  font-weight: 600;
+  color: #021a6e;
+  margin-top: 5px;
+  margin-bottom: 2px;
+}
+.pop_once .btn_more {
   position: absolute;
-  inset: auto 0 0;
-  height: 55px;
-  background-color: rgba(88, 127, 213, 0.1);
+  inset: auto 0 80px 0;
+  margin: 0 auto;
+  width: 184px;
+  height: 39px;
+  background: #587fd5;
+  border-radius: 20px;
+  font-size: 18px;
+  color: #fff;
+}
+.pop_once .btn_close {
   font-size: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 17px;
+  position: absolute;
+  inset: auto 0 33px 0;
+  margin: 0 auto;
+  width: 30px;
+  height: 31px;
+  background: url(../images/ico/ico_pop_close_b2.png);
 }
-#floating .slick-arrow {
-  width: 27px;
-  height: 21px;
-  background-size: 100% 100%;
-}
-#floating .slick-prev {
-  background-image: url(../images/ico/ico_prev_fb.png);
-}
-#floating .slick-prev.slick-disabled {
-  background-image: url(../images/ico/ico_prev_fb_d.png);
-}
-#floating .slick-next {
-  background-image: url(../images/ico/ico_next_fb.png);
-}
-#floating .slick-next.slick-disabled {
-  background-image: url(../images/ico/ico_next_fb_d.png);
-} */
+/* [e] 2023-11-14 */
 
 /*****************************************************************************************************************************************************************************************/
 
@@ -947,7 +927,7 @@
   .main_slide ul.slide_left li .txt {
     padding-top: 24px;
   }
-  /* [s] 2023-10-30 클래스 변경 */
+
   .try-main {
     font-size: 17px;
   }
@@ -955,7 +935,6 @@
     width: 8px;
     height: 13px;
   }
-  /* [e] 2023-10-30 클래스 변경 */
 
   .m_btm_ban li .txt {
     width: 950px;
@@ -991,15 +970,14 @@
 @media all and (max-width: 1200px) {
   #container {
     margin-top: 117px;
-  } /* 2023-10-30 */
+  }
 
   .visual {
-    /* height: 600px; */
     padding-top: 0;
-  } /* 2023-10-27 */
+  }
   .slick-slide.visual {
     height: 600px;
-  } /* 2023-10-27 */
+  }
   .visual.visual05 .txt_box .brand img {
     height: 90px;
   }
@@ -1092,15 +1070,14 @@
   .visual_slide {
     transform: translateY(14.4vw);
     margin-bottom: 14.4vw;
-  } /* 2023-10-30 */
+  }
   .visual {
     position: relative;
-    /* height: auto; */
     background: transparent;
-  } /* 2023-10-27 */
+  }
   .slick-slide.visual {
     height: auto;
-  } /* 2023-10-27 */
+  }
   .visual .txt_box {
     position: absolute;
     inset: 0;
@@ -1323,7 +1300,8 @@
   .popup_wrap#main_pop .slick-slide.modal02 .pop_close_btn::before {
     background-image: url(../images/ico/ico_close_purple.png);
   }
-  .popup_wrap#main_pop .slick-slide.modal03 .text {
+  /* [s] 2023-11-14 */
+  /* .popup_wrap#main_pop .slick-slide.modal03 .text {
     position: absolute;
     top: 0;
     left: 0;
@@ -1379,7 +1357,41 @@
   .popup_wrap#main_pop .slick-slide.modal03 .pop_close_btn::before {
     background-image: url(../images/ico/ico_close_blue.png);
     filter: brightness(0);
+  } */
+  .popup_wrap#main_pop .slick-slide.modal03 .text {
+    position: absolute;
+    inset: 12.5vw 0 auto 0;
+    font-family: "gotham-round";
   }
+  .popup_wrap#main_pop .slick-slide.modal03 h3 {
+    position: static;
+    color: #021a6e;
+    font-size: 6.833vw;
+    line-height: 1.4;
+  }
+  .popup_wrap#main_pop .slick-slide.modal03 p {
+    position: static;
+    color: #1a2240;
+    font-size: 2.917vw;
+    letter-spacing: 0;
+    line-height: 1.4;
+  }
+  .popup_wrap#main_pop .slick-slide.modal03 p b {
+    font-size: 3.333vw;
+  }
+  .popup_wrap#main_pop .slick-slide.modal03 .btn_more {
+    bottom: 9vw;
+    background: #587fd5;
+  }
+  .popup_wrap#main_pop .slick-slide.modal03 .pop_close_btn {
+    background-color: #021a6e;
+    bottom: auto;
+    top: 5vw;
+  }
+  .popup_wrap#main_pop .slick-slide.modal03 .pop_close_btn::before {
+    background-image: url(../images/ico/ico_close_white.png);
+  }
+  /* [e] 2023-11-14 */
 
   .demo_ban {
     flex-direction: column;
@@ -1413,49 +1425,9 @@
     background-image: url(../images/bg/bg_subbanner_blog_m.png);
   }
 
-  /* 2023-10-27 삭제(style02로 이동, 수정)
-   #floating {
-    position: relative;
-    top: 0;
-    right: 0;
-    border-radius: 0;
-    box-shadow: none;
-    width: 100%;
-    height: auto;
-  }
-  #floating li {
-    padding: 0;
-    height: 14.42vw;
-    justify-content: center;
-  }
-  #floating li.li01 {
-    background-color: #f5e1fd;
-  }
-  #floating li.li01 img {
-    height: 6.5vw;
-  }
-  #floating li p {
-    font-size: 2.67vw;
-    margin-top: 0.83vw;
-  }
-  #floating .ctrl {
-    position: static;
-    height: 0;
-    background-color: transparent;
-  }
-  #floating .slick-arrow {
-    width: 4.5vw;
-    height: 3.42vw;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  #floating .slick-prev {
-    left: 3.75vw;
-  }
-  #floating .slick-next {
-    right: 3.75vw;
-  } */
+  .pop_once {
+    display: none !important;
+  } /* 2023-11-14 */
 }
 
 @media all and (max-width: 768px) {
@@ -1562,7 +1534,7 @@
     margin-top: -10px;
     margin-left: 0;
   }
-  /* [s] 2023-10-30 클래스 변경 */
+
   .try-main {
     font-size: 2.917vw;
     margin-top: 2.5vw;
@@ -1575,7 +1547,6 @@
     height: 1.917vw;
     margin-left: 0.5vw;
   }
-  /* [s] 2023-10-30 클래스 변경 */
 
   .m_btm_ban li .txt {
     width: 600px;

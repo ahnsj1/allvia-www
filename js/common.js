@@ -654,18 +654,49 @@ $(function () {
     }
   }
 
-  const pop_once = document.querySelectorAll(".pop_once");
-  function showOnce(pop) {
-    const closeBtn = pop.querySelector(".btn_close");
-    const is_pop_show = sessionStorage.getItem(`alreadyShow_${pop.id}`);
-    if (is_pop_show != "already shown") pop.style.display = "block";
-    closeBtn.addEventListener("click", (e) => {
-      e.preventDefault();
-      sessionStorage.setItem(`alreadyShow_${pop.id}`, "already shown");
-      pop.style.display = "none";
+  /* [s] 2023-11-14 */
+  // const pop_once = document.querySelectorAll(".pop_once");
+  // function showOnce(pop) {
+  //   const closeBtn = pop.querySelector(".btn_close");
+  //   const is_pop_show = sessionStorage.getItem(`alreadyShow_${pop.id}`);
+  //   if (is_pop_show != "already shown") pop.style.display = "block";
+  //   closeBtn.addEventListener("click", (e) => {
+  //     e.preventDefault();
+  //     sessionStorage.setItem(`alreadyShow_${pop.id}`, "already shown");
+  //     pop.style.display = "none";
+  //   });
+  // }
+  // pop_once.forEach((pop) => showOnce(pop));
+
+  var toggleMainPopup = function () {
+    var handleStorage = {
+      setStorage: function (name, exp) {
+        var date = new Date();
+        date = date.setTime(date.getTime() + exp * 24 * 60 * 60 * 1000);
+        localStorage.setItem(name, date);
+      },
+      getStorage: function (name) {
+        var now = new Date();
+        now = now.setTime(now.getTime());
+        return parseInt(localStorage.getItem(name)) > now;
+      },
+    };
+
+    if (handleStorage.getStorage("today")) {
+      $(".pop_once").removeClass("on");
+    } else {
+      $(".pop_once").addClass("on");
+    }
+
+    $(".pop_once").on("click", ".btn_close", function () {
+      // 로컬 스토리지에 today라는 이름으로 1일(24시간 뒤) 동안 보이지 않게
+      handleStorage.setStorage("today", 1);
+      $(this).parents(".pop_once.on").removeClass("on");
     });
-  }
-  pop_once.forEach((pop) => showOnce(pop));
+  };
+
+  toggleMainPopup();
+  /* [e] 2023-11-14 */
 
   // 2023-10-27 floating
   const floating = document.getElementById("floating");

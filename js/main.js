@@ -92,7 +92,6 @@ $(function () {
     })
     .resize();
 
-  // 2022-09-26 메인 팝업
   var mainPopSlick = $("#main_pop ul");
   mainPopSlick.slick({
     infinite: true,
@@ -103,12 +102,4 @@ $(function () {
     dots: true,
     arrows: false,
   });
-
-  // 2023-10-27 삭제
-  // var mainFloating = $("#floating ul");
-  // var floatingCtrl = $("#floating .ctrl");
-  // mainFloating.slick({
-  //   infinite: false,
-  //   appendArrows: floatingCtrl,
-  // });
 });
