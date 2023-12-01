@@ -1438,9 +1438,9 @@ body.fix #wrap {
 }
 .price_wrap .price_list .slick-slide .inner {
   position: relative;
-  height: 720px;
+  height: 760px;
   padding: 20px 25px 0;
-}
+} /* 2023-12-01 */
 .price_wrap .price_list .slick-slide .inner > ul > li {
   position: relative;
   padding-left: 14px;
@@ -1475,6 +1475,26 @@ body.fix #wrap {
 .price_wrap .price_list .slick-slide .inner > ul > li span {
   font-size: 15px;
 }
+/* [s] 2023-12-01 */
+.price_wrap .price_list .slick-slide .inner > ul > li.note {
+  padding-left: 0;
+  color: #000 !important;
+  font-size: 18px;
+}
+.price_wrap .price_list .slick-slide .inner > ul > li.note li {
+  padding-left: 20px;
+}
+.price_wrap .price_list .slick-slide .inner > ul > li.note li::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  background: #000;
+  border-radius: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+/* [e] 2023-12-01 */
 .price_wrap .price_list .slick-slide .features .btm {
   position: absolute;
   z-index: 1;
@@ -2273,6 +2293,19 @@ body.fix #wrap {
     width: 3px;
     height: 3px;
   }
+  /* [s] 2023-12-01 */
+  .price_wrap .price_list .slick-slide .inner > ul > li.note {
+    font-size: 10px;
+  }
+  .price_wrap .price_list .slick-slide .inner > ul > li.note li {
+    padding-left: 10px;
+  }
+  .price_wrap .price_list .slick-slide .inner > ul > li.note li::before {
+    width: 2px;
+    height: 2px;
+    margin-right: 5px;
+  }
+  /* [e] 2023-12-01 */
   .price_wrap .price_list .slick-slide .inner {
     height: 420px;
     padding: 5px 15px 0;
