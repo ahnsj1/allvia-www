@@ -5600,6 +5600,9 @@
 .demo_ban.bg02 .demo_math {
   background-image: url(../images/pic/DEMO_BANNERS_MathAlive.jpg);
 }
+.demo_ban .demo_chg {
+  background-image: url(../images/pic/DEMO_BANNERS_Challenge.jpg);
+} /* 2023-12-19 */
 .demo_ban > div strong {
   display: block;
   font-size: 40px;
@@ -6134,7 +6137,7 @@
   background: #fff;
   display: flex;
   align-items: center;
-  justify-content: center; /* 2023-10-30 */
+  justify-content: center;
   text-align: center;
   font-size: 16px;
   position: relative;
@@ -10412,7 +10415,7 @@
     background: transparent;
     padding-right: 1.5vw;
     padding-left: 1.5vw;
-  } /* 2023-10-30 */
+  }
   .welcome_cont > div.half::before {
     content: "";
     position: absolute;
@@ -10427,7 +10430,7 @@
   }
   .welcome_cont > div.half.conversion > img {
     top: 3.5vw;
-  } /* 2023-10-30 */
+  }
   .welcome_cont > div.half.blog > img {
     top: 0.833vw;
   }
@@ -10470,7 +10473,7 @@
 
   #free_trial_pop .popup {
     width: 93vw;
-  } /* 2023-10-27 */
+  }
   #free_trial_pop .head {
     height: 9.083vw;
   }
@@ -10571,7 +10574,6 @@
   #free_trial_pop form li {
     align-items: flex-start;
   }
-  /* [s] 2023-10-27 폰트사이즈 조정 */
   #free_trial_pop form .tit {
     line-height: 1.4;
     width: 26.667vw;
@@ -10591,7 +10593,6 @@
     height: 13.667vw;
     font-size: 2.2vw;
   }
-  /* [e] 2023-10-27 */
   #free_trial_pop form .choose {
     gap: 0;
     padding-top: 1.1vw;
@@ -10605,11 +10606,11 @@
     width: 1.5vw;
     height: 1.5vw;
     margin-right: 1.25vw;
-  } /* 2023-10-27 */
+  }
   #free_trial_pop .check {
     margin-top: 2.917vw;
     font-size: 2.2vw;
-  } /* 2023-10-27 */
+  }
   #free_trial_pop .check > input {
     height: 3vw;
   }
@@ -11215,6 +11216,9 @@
   .demo_ban.bg02 .demo_math {
     background-image: url(../images/bg/bg_demo05_m.jpg);
   }
+  .demo_ban .demo_chg {
+    background-image: url(../images/bg/bg_demo06_m.jpg);
+  } /* 2023-12-19 */
   .demo_ban > div strong {
     font-size: 30px;
   }
@@ -11575,7 +11579,7 @@
   .form_page_wrap .form_wrap ul li input[type="tel"]::placeholder,
   .form_page_wrap .form_wrap ul li input[type="password"]::placeholder {
     font-size: 11px;
-  } /* 2023-10-30 */
+  }
   .form_page_wrap .form_wrap .lay03 .con .selectric-wrapper {
     height: 30px;
     overflow: hidden;
@@ -12224,9 +12228,6 @@
     top: 170px;
   }
 
-  /* #free_trial_pop .how_txt li span {
-    transform: scale(0.7);
-  } 2023-10-27 삭제 */
   #free_trial_pop .chk_txt {
     transform: translateX(50%) scale(0.7);
   }
